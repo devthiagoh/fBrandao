@@ -1,0 +1,237 @@
+/* all */
+.angular-google-map-container { 
+  height: 100%; 
+}
+
+.custom {
+  background-color: #6f0909 !important; 
+  color: white;
+ }
+
+.custom .item {
+  background-color: transparent;
+  border:none;
+  color: white;
+  border-color: transparent;
+  border-style: none;        
+}
+
+.custom .item-complex .item-content, .dark .item-radio .item-content {
+  background-color: transparent;
+}
+
+.custom ion-header-bar {
+	background: #6f0909; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left top, #6f0909, #db460e); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom right, #6f0909, #db460e); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom right, #6f0909, #db460e); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom right, #6f0909, #db460e); /* Standard syntax */
+	border-bottom: none;
+	border-color: transparent;
+  	border-style: none;
+	height: 105px;  
+}
+
+.custom img.center {
+	display: block;
+	margin: 0 auto;
+	width: 115px;
+	height: 95px;
+	border-color: transparent;
+  	border-style: none;
+}
+
+.custom-header-bar-nav-bar ion-header-bar {
+	background-color: #6f0909; 
+	color: white;
+	border-bottom: none;
+	border-color: transparent;
+  	border-style: none;	  
+}
+
+.custom-header-bar-nav-bar button {
+  background-color: transparent;
+  border:none;
+  color: white !important;        
+}
+
+.custom ion-content{
+	padding-top: 25%;
+}
+
+.bar-custom h1.title{
+  color:#fff !important;
+}
+
+p {
+	text-align: justify;
+	padding: 10px;
+}
+
+h4 {
+	text-align: center;
+	color: white;
+	padding-top: 25%;
+}
+
+.custom-div{
+	color: gray;
+}
+
+.custom-div h4{
+	color: gray;
+	padding: 10px;
+}
+
+/*login*/
+
+.custom-login ion-header-bar{
+	background-color: transparent;
+	border: none;	
+	border-top: none;
+	border-bottom: none;
+	padding-top: 25%;
+	border-color: transparent;
+    border-style: none;
+}
+
+.custom-login img.center {
+	display: block;
+	margin: 0 auto;
+	width: 195px;
+	height: 165px;
+	z-index: 1;
+}
+
+.custom-login ion-content{
+	padding-top: 65%;
+	border-top: none;
+	border-color: transparent;
+    border-style: none;
+}
+
+.custom-login button {
+  background-color: #6f0909;
+  color: white !important;
+  border-color: transparent;
+  border-style: none;        
+}
+
+.custom-login span {
+	color: white;
+}
+
+.custom-login input {
+	color: white;
+	font-size: 18px;
+}
+
+.custom-login .item {
+  background-color: transparent;
+  border:none;
+  color: white;        
+}
+
+.custom-login .item-complex .item-content, .dark .item-radio .item-content {
+  background-color: transparent;
+}
+
+/* Home */
+.custom-bg-home-view-01 {
+	background-image: url(../img/background_home_view_01.png);
+	color: white;
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.custom-bg-home-view-02 {
+	background-image: url(../img/background_home_view_02.png);
+	color: white;
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.custom-bg-home-view-10 {
+	background-image: url(../img/background_home_view_10.png);
+	background-color: rgb(59, 112, 163);
+	color: white;
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.custom-bg-home-view-08{
+	background-color: #ede9ea;
+}
+
+.custom-bg-home-view-11 {
+	background-image: url(../img/background_home_view_11.png);
+	color: white;
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.image-home-view-11 {
+	width: 48px;
+	height: 68px !important;
+}
+
+/* Sobre */
+.custom-bg-sobre {
+  	background-image: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url("../img/background_sobre.png");
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.custom-bg-sobre h4{
+	color: black;
+}
+
+/* Orçamentos */
+.custom-bg-orcamentos {
+	background-image: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url("../img/background_orcamentos.png");
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.custom-bg-orcamentos h4{
+	color: black;
+}
+
+.custom-form-btn button{
+  background-color: #6f0909;
+  color: white !important;        
+}
+
+.custom-opinioes {
+  background-color: #6f0909;
+  color: white !important;
+}
+
+.custom-btn-contatos {
+    display: block;
+	margin: 0 auto;
+	width: 337px !important;
+    height: 50px;
+	z-index: 1;
+    background-color: #6f0909 !important;
+    border-color: transparent;
+    border-style: none;
+}

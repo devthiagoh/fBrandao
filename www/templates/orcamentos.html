@@ -1,0 +1,62 @@
+<ion-view view-title="Orçamentos" style="height: 100% !important;">
+  <ion-content class="custom-bg-orcamentos">
+    <form>
+	    <h4>
+	    	Aqui, seu orçamento sai rapidinho!
+	    </h4>
+	    <p>
+			Preencha todos os campos se for possível para que possamos lhe oferecer o projeto mais adequado. Ao receber sua solicitação, nosso Setor Comercial irá analisa-la e enviar o melhor projeto dentro de suas condições. Em seguida, entraremos em contato para tirarmos todas as suas dúvidas, sem compromisso.
+
+			Já tem um orçamento de outra empresa? Nos envie e faremos o possível para cobrir, oferecendo mais por menos. Não feche nenhum projeto sem nos consultar. Garantimos que terá uma grande surpresa.
+	    </p>
+
+	    <div class="list list-inset">
+		  <label class="item item-input">
+		    <input type="text" placeholder="Empresa">
+		  </label>
+		  <label class="item item-input">
+		    <input type="text" placeholder="Nome do Contato">
+		  </label>
+		  <label class="item item-input">
+		    <input type="text" placeholder="Telefone Celular">
+		  </label>
+		  <label class="item item-input">
+		    <input type="text" placeholder="Telefone Fixo">
+		  </label>
+		  <label class="item item-input">
+		    <input type="text" placeholder="e-Mail">
+		  </label>
+		  <label class="item item-input">
+		    <input type="text" placeholder="Como conheceu a FBrandão?">
+		  </label>
+		</div>
+
+		<div class="row">
+		  <div class="col-50">
+		  	<ion-checkbox ng-model="filter.pacote">Pacote</ion-checkbox>
+		  	<ion-checkbox ng-model="filter.assessoria">Assessoria</ion-checkbox>
+		  	<ion-checkbox ng-model="filter.fotografia">Fotografia</ion-checkbox>
+		  	<ion-checkbox ng-model="filter.facebook">Facebook</ion-checkbox>
+		  	<ion-checkbox ng-model="filter.sistema">Sistema</ion-checkbox>
+	  	  </div>
+		  <div class="col-50">
+		  	<ion-checkbox ng-model="filter.hospedagem">Hospedagem</ion-checkbox>
+		  	<ion-checkbox ng-model="filter.google">Google</ion-checkbox>
+		  	<ion-checkbox ng-model="filter.design">Design</ion-checkbox>
+		  	<ion-checkbox ng-model="filter.outros">Outros</ion-checkbox>
+	  	  </div>
+		</div>
+
+		<div class="list list-inset">
+		  <label class="item item-input">
+		    <textarea placeholder="Descreva outros detalhes o que deseja:"></textarea>
+		  </label>
+		  <label>
+  			<button class="button button-block custom-btn-contatos">
+				Enviar
+  			</button>
+	  	</label>
+	  	</div>	  						
+	</form>	  
+  </ion-content>
+</ion-view>
