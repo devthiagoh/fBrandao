@@ -84,6 +84,11 @@ p {
     height: 100%;
 }
 
+.custom input {
+	margin-left: 4%; 
+	width: 70%;
+}
+
 .angular-google-map-container { 
   height: 100%; 
 }
@@ -231,9 +236,11 @@ p {
   color: white !important;        
 }
 
-.custom-opinioes {
-  background-color: #6f0909;
-  color: white !important;
+/* Opiniões Clientes */
+.custom-opinioes img {
+  max-width: 200px;
+  display: block;
+  margin: 0 auto;
 }
 
 .custom-btn-contatos {
