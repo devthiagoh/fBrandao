@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic', 'starter.controllers'])
+angular.module('starter', ['ionic', 'starter.controllers', 'module_gallery'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -16,10 +16,10 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 .config(function($stateProvider, $urlRouterProvider) {
   
   $stateProvider
-    .state('login', {
-      url: '/login',
-      templateUrl: 'templates/login.html',
-      controller: 'LoginCtrl'
+    .state('splash', {
+      url: '/splash',
+      templateUrl: 'templates/splash.html',
+      controller: 'SplashCtrl'
     })
 
     .state('menu', {
@@ -43,7 +43,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       url: '/sobre',
       views: {
         'menuContent': {
-          templateUrl: 'templates/sobre.html'
+          templateUrl: 'templates/sobre.html',
+          controller: 'SobreCtrl'
         }
       }
     })
@@ -118,7 +119,12 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     })
     ;
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/login');
+    $urlRouterProvider.otherwise('/splash');
 });
 
-angular.module('module_contatos', ['ionic', 'uiGmapgoogle-maps']);
+
+// angular.module('module_contatos', ['ionic', 'uiGmapgoogle-maps']);
+
+
+
+

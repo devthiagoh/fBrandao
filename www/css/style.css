@@ -1,71 +1,10 @@
 /* all */
-.angular-google-map-container { 
-  height: 100%; 
-}
+@font-face {
+    font-family: 'customFont';
+    src: url('../lib/ionic/fonts/custom.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
-.custom {
-  background-color: #6f0909 !important; 
-  color: white;
- }
-
-.custom .item {
-  background-color: transparent;
-  border:none;
-  color: white;
-  border-color: transparent;
-  border-style: none;        
-}
-
-.custom .item-complex .item-content, .dark .item-radio .item-content {
-  background-color: transparent;
-}
-
-.custom ion-header-bar {
-	background: #6f0909; /* For browsers that do not support gradients */
-	background: -webkit-linear-gradient(left top, #6f0909, #db460e); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(bottom right, #6f0909, #db460e); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(bottom right, #6f0909, #db460e); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(to bottom right, #6f0909, #db460e); /* Standard syntax */
-	border-bottom: none;
-	border-color: transparent;
-  	border-style: none;
-	height: 105px;  
-}
-
-.custom img.center {
-	display: block;
-	margin: 0 auto;
-	width: 115px;
-	height: 95px;
-	border-color: transparent;
-  	border-style: none;
-}
-
-.custom-header-bar-nav-bar ion-header-bar {
-	background-color: #6f0909; 
-	color: white;
-	border-bottom: none;
-	border-color: transparent;
-  	border-style: none;	  
-}
-
-.custom-header-bar-nav-bar button {
-  background-color: transparent;
-  border:none;
-  color: white !important;        
-}
-
-.custom ion-content{
-	padding-top: 25%;
-}
-
-.bar-custom h1.title{
-  color:#fff !important;
-}
-
-p {
-	text-align: justify;
-	padding: 10px;
 }
 
 h4 {
@@ -74,18 +13,115 @@ h4 {
 	padding-top: 25%;
 }
 
-.custom-div{
+.custom {
+  background-color: #6f0909 !important; 
+  color: white;
+ }
+
+.custom-header-bar-nav-bar ion-header-bar {
+	background-color: #6f0909 !important; 
+	color: white;
+	border-bottom: none;
+	border-color: transparent;
+  	border-style: none;	  
+}
+
+.custom-header-bar-nav-bar ion-view {
+	background-color: #6f0909; 
+	border-bottom: none;
+	border-color: transparent;
+  	border-style: none;	  
+}
+
+.custom ion-content {
+	padding-top: 7%;
+}
+
+.custom-div {
 	color: gray;
 }
 
-.custom-div h4{
+.custom-div h4 {
 	color: gray;
 	padding: 10px;
 }
 
-/*login*/
+.custom .item {
+  background-color: transparent;
+  border:none;
+  color: white;
+  border-color: transparent;
+  border-style: none; 
+  font-family: customFont;       
+}
 
-.custom-login ion-header-bar{
+.custom .item-complex .item-content, .dark .item-radio .item-content {
+  background-color: transparent;
+}
+
+.custom-header-bar-nav-bar button {
+  background-color: transparent;
+  border:none;
+  color: white !important;        
+}
+
+.bar-custom h1.title{
+  color:#fff !important;
+}
+
+.angular-google-map-container { 
+  height: 100%; 
+}
+
+/*
+.custom ion-header-bar {
+	background: #6f0909; /* For browsers that do not support gradients 
+	background: -webkit-linear-gradient(left top, #6f0909, #db460e); /* For Safari 5.1 to 6.0 
+	background: -o-linear-gradient(bottom right, #6f0909, #db460e); /* For Opera 11.1 to 12.0 
+	background: -moz-linear-gradient(bottom right, #6f0909, #db460e); /* For Firefox 3.6 to 15 
+	background: linear-gradient(to bottom right, #6f0909, #db460e); /* Standard syntax 
+	border-bottom: none;
+	border-color: transparent;
+  	border-style: none;
+	height: 105px;  
+}
+*/
+/* Menu */
+.custom img.center {
+	display: block;
+	margin: 0 auto;
+	height: 95px;
+	border-color: transparent;
+  	border-style: none;
+}
+
+
+/*login*/
+.custom-splash {
+	background-image: url(../img/background.jpg);
+	color: white;
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.custom-splash ion-content {
+	padding-top: 50%;
+	border-top: none;
+	border-color: transparent;
+    border-style: none;
+}
+
+.custom-splash img.center {
+	display: block;
+	margin: 0 auto;
+	height: 165px;
+	z-index: -1;
+}
+
+/*.custom-splash ion-header-bar{
 	background-color: transparent;
 	border: none;	
 	border-top: none;
@@ -95,50 +131,35 @@ h4 {
     border-style: none;
 }
 
-.custom-login img.center {
-	display: block;
-	margin: 0 auto;
-	width: 195px;
-	height: 165px;
-	z-index: 1;
-}
-
-.custom-login ion-content{
-	padding-top: 65%;
-	border-top: none;
-	border-color: transparent;
-    border-style: none;
-}
-
-.custom-login button {
+.custom-splash button {
   background-color: #6f0909;
   color: white !important;
   border-color: transparent;
   border-style: none;        
 }
 
-.custom-login span {
+.custom-splash span {
 	color: white;
 }
 
-.custom-login input {
+.custom-splash input {
 	color: white;
 	font-size: 18px;
 }
 
-.custom-login .item {
+.custom-splash .item {
   background-color: transparent;
   border:none;
   color: white;        
 }
 
-.custom-login .item-complex .item-content, .dark .item-radio .item-content {
+.custom-splash .item-complex .item-content, .dark .item-radio .item-content {
   background-color: transparent;
-}
+}*/
 
 /* Home */
 .custom-bg-home-view-01 {
-	background-image: url(../img/background_home_view_01.png);
+	background-image: url(../img/background_home_view_01.jpg);
 	color: white;
 	background-repeat: no-repeat;
     background-position: center;
@@ -148,7 +169,7 @@ h4 {
 }
 
 .custom-bg-home-view-02 {
-	background-image: url(../img/background_home_view_02.png);
+	background-image: url(../img/background.jpg);
 	color: white;
 	background-repeat: no-repeat;
     background-position: center;
@@ -158,7 +179,7 @@ h4 {
 }
 
 .custom-bg-home-view-10 {
-	background-image: url(../img/background_home_view_10.png);
+	background-image: url(../img/background.jpg);
 	background-color: rgb(59, 112, 163);
 	color: white;
 	background-repeat: no-repeat;
@@ -173,7 +194,7 @@ h4 {
 }
 
 .custom-bg-home-view-11 {
-	background-image: url(../img/background_home_view_11.png);
+	background-image: url(../img/background.jpg);
 	color: white;
 	background-repeat: no-repeat;
     background-position: center;
@@ -189,21 +210,32 @@ h4 {
 
 /* Sobre */
 .custom-bg-sobre {
-  	background-image: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url("../img/background_sobre.png");
+  	background-image: url(../img/background.jpg);
+	color: white;
 	background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     width: 100%;
     height: 100%;
+    padding: 8%;
 }
 
 .custom-bg-sobre h4{
-	color: black;
+	padding: 0%;
+}
+
+.custom-bg-sobre ion-scroll {
+	height: 250px;
+}
+
+.custom-bg-sobre ion-gallery {
+	background-color: #6f0909 !important; 
+  	color: white;
 }
 
 /* Orçamentos */
 .custom-bg-orcamentos {
-	background-image: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url("../img/background_orcamentos.png");
+	background-image: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url("../img/background.jpg");
 	background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

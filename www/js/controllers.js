@@ -1,18 +1,21 @@
 angular.module('starter.controllers', [])
 
-.controller('LoginCtrl', function($scope, $ionicModal, $state) {
+.controller('SplashCtrl', function($scope, $ionicModal, $state, $timeout) {
   
-  $ionicModal.fromTemplateUrl('templates/login.html', {
+  $ionicModal.fromTemplateUrl('templates/splash.html', {
     scope: $scope
   }).then(function(modal) {
     $scope.modal = modal;
   });
 
-  $scope.signIn = function(user) {
-    console.log('Fazendo login...', user);
-    $state.go('menu.home');
-  };
-  
+  // $scope.signIn = function(user) {
+  //   console.log('Fazendo login...', user);
+  //   $state.go('menu.home');
+  // };
+
+  $timeout(function() {
+      $state.go('menu.home');
+  }, 300); 
  
 })
 
@@ -149,8 +152,13 @@ angular.module('starter.controllers', [])
   }); 
 })
 
-.controller('ContatosCtrl', function($scope) {
-  $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
+// .controller('ContatosCtrl', function($scope) {
+//   $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
+// })
+
+.controller('SobreCtrl', function($scope) {
+  $scope.items = [{src:'img/foto_01.jpg'}, {src:'img/foto_02.jpg'}, {src:'img/foto_03.jpg'},
+                  {src:'img/foto_04.jpg'}, {src:'img/foto_05.jpg'}, {src:'img/foto_06.jpg'}]
 })
 
 ;
