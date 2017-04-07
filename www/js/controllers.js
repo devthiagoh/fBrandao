@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['ionic', 'module_gallery'])
 
 .controller('SplashCtrl', function($scope, $ionicModal, $state, $timeout) {
   
