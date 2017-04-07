@@ -15,7 +15,7 @@ angular.module('starter.controllers', ['ionic', 'module_gallery'])
 
   $timeout(function() {
       $state.go('menu.home');
-  }, 300); 
+  }, 3000); 
  
 })
 
