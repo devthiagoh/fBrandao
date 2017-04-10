@@ -1,4 +1,4 @@
-/* all */
+/*********************************** all ***********************************/
 @font-face {
     font-family: 'customFont';
     src: url('../lib/ionic/fonts/custom.woff') format('woff');
@@ -10,12 +10,14 @@ h4 {
 	text-align: center;
 	color: white;
 	padding-top: 4%;
+  font-weight: 200;
 	/*padding: 8%;*/
 }
 
 p {
 	padding: 8%;
 	padding-top: 3%;
+  font-weight: 200;
 }
 
 .custom {
@@ -28,14 +30,14 @@ p {
 	color: white;
 	border-bottom: none;
 	border-color: transparent;
-  	border-style: none;	  
+	border-style: none;	  
 }
 
 .custom-header-bar-nav-bar ion-view {
 	background-color: #6f0909; 
 	border-bottom: none;
 	border-color: transparent;
-  	border-style: none;	  
+	border-style: none;	  
 }
 
 .custom ion-content {
@@ -66,7 +68,7 @@ p {
 
 .custom-header-bar-nav-bar button {
   background-color: transparent;
-  border:none;
+  /*border:none;*/
   color: white !important;        
 }
 
@@ -78,10 +80,10 @@ p {
 	background-image: url(../img/background.jpg);
 	color: white;
 	background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .custom input {
@@ -89,48 +91,30 @@ p {
 	width: 92%;
 }
 
-/*.angular-google-map-container { 
-  height: 100%; 
-}*/
-
-/*
-.custom ion-header-bar {
-	background: #6f0909; /* For browsers that do not support gradients 
-	background: -webkit-linear-gradient(left top, #6f0909, #db460e); /* For Safari 5.1 to 6.0 
-	background: -o-linear-gradient(bottom right, #6f0909, #db460e); /* For Opera 11.1 to 12.0 
-	background: -moz-linear-gradient(bottom right, #6f0909, #db460e); /* For Firefox 3.6 to 15 
-	background: linear-gradient(to bottom right, #6f0909, #db460e); /* Standard syntax 
-	border-bottom: none;
-	border-color: transparent;
-  	border-style: none;
-	height: 105px;  
-}
-*/
-/* Menu */
+/*********************************** Menu **********************************/
 .custom img.center {
 	display: block;
 	margin: 0 auto;
 	height: 95px;
 	border-color: transparent;
-  	border-style: none;
+	border-style: none;
 }
 
-
-/*splash*/
+/********************************** splash *********************************/
 .custom-splash {
 	background-image: url(../img/background.jpg);
 	background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .custom-splash ion-content {
 	padding-top: 50%;
 	border-top: none;
 	border-color: transparent;
-    border-style: none;
+  border-style: none;
 }
 
 .custom-splash img.center {
@@ -140,72 +124,54 @@ p {
 	z-index: -1;
 }
 
-/*.custom-splash ion-header-bar{
-	background-color: transparent;
-	border: none;	
-	border-top: none;
-	border-bottom: none;
-	padding-top: 25%;
-	border-color: transparent;
-    border-style: none;
-}
-
-.custom-splash button {
-  background-color: #6f0909;
-  color: white !important;
-  border-color: transparent;
-  border-style: none;        
-}
-
-.custom-splash span {
-	color: white;
-}
-
-.custom-splash input {
-	color: white;
-	font-size: 18px;
-}
-
-.custom-splash .item {
-  background-color: transparent;
-  border:none;
-  color: white;        
-}
-
-.custom-splash .item-complex .item-content, .dark .item-radio .item-content {
-  background-color: transparent;
-}*/
-
-/* Home */
+/*********************************** Home **********************************/
 .custom-background-home {
 	background-image: url(../img/background_home.jpg);
 	color: white;
 	background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* home view 11 */
+.custom-bg-home-view-11 {
+  background-image: url(../img/background_home_view_10.png);
+  background-color: #6f0909;
+  color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  padding: 8%;
+}
+
+.custom-bg-home-view-11 h4 {
+  padding-top: 0%;
+  text-align: left;
+}
+
+.custom-bg-home-view-11 p {
+  padding: 0%;
+  text-align: left;
 }
 
 .image-home-view-11 {
 	width: 48px;
-	height: 68px !important;
+	height: 120px !important;
 }
 
-/* Sobre */
+/********************************** Sobre **********************************/
 .custom-bg-sobre {
-  	background-image: url(../img/background.jpg);
+	background-image: url(../img/background.jpg);
 	color: white;
 	background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    padding: 8%;
-}
-
-.custom-bg-sobre h4{
-	padding: 0%;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .custom-bg-sobre ion-scroll {
@@ -214,110 +180,123 @@ p {
 
 .custom-bg-sobre ion-gallery {
 	background-color: #6f0909 !important; 
-  	color: white;
+	color: white;
 }
 
-/* Orçamentos */
-
-.custom-form-btn button {
-  background-color: #6f0909;
-  color: white !important;        
-}
-
-.custom-orcamento{
+/******************************** Orçamentos *******************************/
+.custom-orcamento {
+  background-image: url(../img/background.jpg);
+  color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 	padding: 6%;
 }
 
 .custom-orcamento h4 {
-	padding-top: 0%;
+  padding-top: 0%;
 }
 
-.custom-btn-orcamento {
-    display: block;
+.custom-orcamento textarea {
+	width: 100;
+}
+
+.checkbox input:checked:before, .checkbox input:checked + .checkbox-icon:before {
+  background: #6f0909;
+  border-color: #ccc;
+}
+
+.custom-orcamento button {
+  display: block;
 	margin: 0 auto;
 	width: 337px !important;
-    height: 50px;
+  height: 50px;
 	z-index: 1;
-    background-color: #6f0909 !important;
-    border-color: transparent;
-    border-style: none;
+  background-color: #6f0909 !important;
+  border-color: transparent;
+  border-style: none;
 }
 
-/* Opiniões Clientes */
+/**************************** Opiniões Clientes ****************************/
 .custom-opinioes img {
   max-width: 200px;
   display: block;
   margin: 0 auto;
 }
 
-#map {
-    width:98%;
-    height:400px;
-    margin:10px auto;
-    box-shadow:0 3px 25px black;
-    position: relative;
-}
-
-/*.scroll {
-  height: 100%;
-}*/
-
-.angular-google-map-container {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-}
-
+/******************************** Contatos *********************************/
 .custom-bg-contatos {
-  	background-image: url(../img/background_contatos.png);
-  	background-color: #4479ab;
-	color: white;
-	background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 390px;
-    padding: 8%;
+  background-image: url(../img/background_home_view_10.png);
+  background-color: #4479ab;
+  color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 390px;
+  padding: 8%;
+}
+
+.custom-bg-contatos label {
+  font-size: large;
+  font-weight: bold;
 }
 
 .custom-bg-contatos p {
-	padding: 0%;
-	padding-top: 5%;
-	text-align: left;
+  padding: 0%;
+  padding-top: 5%;
+  text-align: left;
 }
 
-.custom-bg-home-view-11 {
-  	background-image: url(../img/background_contatos.png);
-  	background-color: #6f0909;
-	color: white;
-	background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    padding: 8%;
+.custom-bg-contatos a {
+  color: #fafafa;
+  padding-left: 2%;
+  font-size: 20px;
+  font-weight: 200;
+  text-decoration: none;
 }
 
-.custom-bg-home-view-11 h4 {
-	/*padding-top: 0%;*/
-	text-align: left;
+.custom-bg-contatos strong {
+  font-weight: bold;
+  font-size: larger;
 }
 
-.custom-bg-home-view-11 p {
-	/*padding: 0%;*/
-	text-align: left;
+.custom-bg-contatos span {
+  font-size: x-small;
 }
 
-.checkbox input:checked:before, .checkbox input:checked + .checkbox-icon:before {
-    background: #6f0909;
-    border-color: #ccc;
+.custom-bg-contatos button {
+  font-size: 16px;
+  font-weight: 100;
+  border-radius: 50px 50px 50px 50px;
+  border-color: white !important;
+  border-width: 2px;
+  border-style: dashed;
+  margin-top: 20%;
 }
 
-/* 
-	
-	ionic plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyBZX9y8Dqfiy9YkeGh3HUJ24RAiGWuMqgw" --variable API_KEY_FOR_IOS="AIzaSyCIXqQzMeUWeOFzPY4SEFhPfiiRd_6jpC8"
-	ionic plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="YOUR_ANDROID_API_KEY_IS_HERE" --variable API_KEY_FOR_IOS="YOUR_IOS_API_KEY_IS_HERE"
+.custom-bg-contatos i {
+  padding-right: inherit;
+}
 
-*/
+#map {
+  width:100%;
+  height:400px;
+  margin:10px auto;
+  /*box-shadow:0 3px 25px black;*/
+  position: relative;
+}
+
+.scroll {
+  height: 100%;
+}
+
+.angular-google-map-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}

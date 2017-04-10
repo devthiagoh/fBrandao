@@ -25,7 +25,7 @@ angular.module('starter.controllers', ['ionic', 'module_gallery', 'uiGmapgoogle-
 
 .controller('HomeCtrl', function($scope) {
   $scope.options = {
-    autoplay: 2500,
+    // autoplay: 2500,
     loop: false,
     speed: 1000,
     slidesPerView: 1,

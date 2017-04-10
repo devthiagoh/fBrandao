@@ -1,26 +1,23 @@
 <ion-view view-title="Contatos" ng-controller="ContatosCtrl">
   <ion-content class="custom-background" data-tap-disabled="true">
-	    <div class="custom-bg-contatos">
-		    <label style="font-size: 18px;" >
-				Estamos na Reta da Penha, Vitória/ES
-			</label>
-			<p>
-				<strong>Telefone:</strong>+55 27 3227-9084<br/>
-				<strong>Suporte:</strong> +55 27 3026-0298<br/>
-				<strong>Celular:</strong> +55 27 99291-1345 (TIM)
-				<br/><br/>
-				<strong>Ha mais de 10 anos com sede própria</strong><br/>
-						Avenida Nossa Senhora da Penha, n367<br/>
-						Ed. Monte Sernio, sala 303 - Santa Lúcia<br/>
-						Vitória - Espírito Santo - CEP. 29055-131<br/>
-						(Ao lado do Bradesco, em frente ao Shopping Boulevard)<br/>
-			</p>
-			
-	  			<!-- <button class="button button-block custom-btn-contatos">
-					
-	  			</button> -->
-	  			<!-- <button ion-button block clear>Peça um orçamento e receba no mesmo dia</button> -->
-		  	<button ion-button block>Peça um orçamento e receba no mesmo dia</button>
+	    <div class="Grid custom-bg-contatos">
+		    <div class="Grid-cell">
+			    <label>
+					Estamos na Reta da Penha, Vitória/ES
+				</label>
+				<p>
+					<strong>Telefone:</strong><a href="tel:+55 27 3227-9084">+55 27 3227-9084</a><br/>
+					<strong>Suporte:</strong><a href="tel:+55 27 3026-0298">+55 27 3026-0298</a><br/>
+					<strong>Celular:</strong><a href="tel:+55 27 99291-1345">+55 27 99291-1345 (TIM)</a>
+					<br/><br/>
+					<strong>Ha mais de 10 anos com sede própria</strong><br/>
+							Avenida Nossa Senhora da Penha, n367<br/>
+							Ed. Monte Sernio, sala 303 - Santa Lúcia<br/>
+							Vitória - Espírito Santo - CEP. 29055-131<br/>
+							<span>(Ao lado do Bradesco, em frente ao Shopping Boulevard)</span><br/>
+				</p>			
+			  	<button class="button button-outline button-block"><i class="icon ion-paper-airplane"></i>Peça um orçamento e receba no mesmo dia</button>
+		  	</div>
 	  	</div>
 	  	<div id="map" >
             <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options">
