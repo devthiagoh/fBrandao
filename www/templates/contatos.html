@@ -1,27 +1,34 @@
-<ion-view view-title="Contatos" >
-  <ion-content class="custom-bg-home-view-10">
-	    <h4 class="mg-md tc-white">
-			Estamos na Reta da Penha, Vitória/ES
-		</h4>
-		<p>
-			<strong>Telefone:<a href="tel:32279084" style="color:#fff !important;">+55 27 3227-9084</a></span><br />Suporte: <a href="tel:30260298" style="color:#fff !important;">+55 27 3026-0298</a><br />Celular: <a href="tel:992911345" style="color:#fff !important;"> +55 27 99291-1345 </a>(TIM)</strong><br /><br /><strong>Ha mais de 10 anos com sede própria</strong><br />Avenida Nossa Senhora da Penha, n367<br />Ed. Monte Sernio, sala 303 - Santa Lúcia<br />Vitória - Espírito Santo - CEP. 29055-131<br />(Ao lado do Bradesco, em frente ao Shopping Boulevard)<br />
-		</p>
-		<label>
-  			<button class="button button-block custom-btn-contatos">
-				Peça um orçamento e receba no mesmo dia
-  			</button>
-	  	</label>
+<ion-view view-title="Contatos" ng-controller="ContatosCtrl">
+  <ion-content class="custom-background" data-tap-disabled="true">
+	    <div class="custom-bg-contatos">
+		    <label style="font-size: 18px;" >
+				Estamos na Reta da Penha, Vitória/ES
+			</label>
+			<p>
+				<strong>Telefone:</strong>+55 27 3227-9084<br/>
+				<strong>Suporte:</strong> +55 27 3026-0298<br/>
+				<strong>Celular:</strong> +55 27 99291-1345 (TIM)
+				<br/><br/>
+				<strong>Ha mais de 10 anos com sede própria</strong><br/>
+						Avenida Nossa Senhora da Penha, n367<br/>
+						Ed. Monte Sernio, sala 303 - Santa Lúcia<br/>
+						Vitória - Espírito Santo - CEP. 29055-131<br/>
+						(Ao lado do Bradesco, em frente ao Shopping Boulevard)<br/>
+			</p>
+			
+	  			<!-- <button class="button button-block custom-btn-contatos">
+					
+	  			</button> -->
+	  			<!-- <button ion-button block clear>Peça um orçamento e receba no mesmo dia</button> -->
+		  	<button ion-button block>Peça um orçamento e receba no mesmo dia</button>
+	  	</div>
+	  	<div id="map" >
+            <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options">
+		        <ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id">
+		        </ui-gmap-marker>
+		    </ui-gmap-google-map>
+        </div>
 
-	  	
-		    <ion-view view-title="Google Maps V3 example">  
-		    
-		      <ion-content data-tap-disabled="true">
-		    
-		        <!-- <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map> -->
-		        
-		      </ion-content>
-		      
-		    </ion-view>
   </ion-content>
 </ion-view>
 

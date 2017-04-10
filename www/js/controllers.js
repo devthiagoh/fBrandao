@@ -1,4 +1,4 @@
-angular.module('starter.controllers', ['ionic', 'module_gallery'])
+angular.module('starter.controllers', ['ionic', 'module_gallery', 'uiGmapgoogle-maps'])
 
 .controller('SplashCtrl', function($scope, $ionicModal, $state, $timeout) {
   
@@ -152,8 +152,91 @@ angular.module('starter.controllers', ['ionic', 'module_gallery'])
   }); 
 })
 
-// .controller('ContatosCtrl', function($scope) {
-//   $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
+.controller('ContatosCtrl', function($scope, $log, $timeout) {
+
+  var lat = -20.3079033;
+  var lng = -40.2961303;
+  var zoomMap = 16;
+  
+  // $scope.map = { 
+  //               center: 
+  //                 { 
+  //                   latitude: lat, 
+  //                   longitude: lng 
+  //                 }, 
+  //                 zoom: zoomMap
+  //             };
+
+  $scope.map = {center: {latitude: lat, longitude: lng }, zoom: zoomMap };
+    $scope.map = {center: {latitude: lat, longitude: lng }, zoom: zoomMap };
+    $scope.options = {scrollwheel: false};
+    $scope.coordsUpdates = 0;
+    $scope.dynamicMoveCtr = 0;
+    $scope.marker = {
+      id: 0,
+      coords: {
+        latitude: lat,
+        longitude: lng
+      },
+      options: { draggable: true },
+      events: {
+        dragend: function (marker, eventName, args) {
+          $log.log('marker dragend');
+          var lat = marker.getPosition().lat();
+          var lon = marker.getPosition().lng();
+          $log.log(lat);
+          $log.log(lon);
+
+          $scope.marker.options = {
+            draggable: true,
+            labelContent: "lat: " + $scope.marker.coords.latitude + ' ' + 'lon: ' + $scope.marker.coords.longitude,
+            labelAnchor: "100 0",
+            labelClass: "marker-labels"
+          };
+        }
+      }
+    };
+    $scope.$watchCollection("marker.coords", function (newVal, oldVal) {
+      if (_.isEqual(newVal, oldVal))
+        return;
+      $scope.coordsUpdates++;
+    });
+    $timeout(function () {
+      $scope.marker.coords = {
+        latitude: lat,
+        longitude: lng
+      };
+      $scope.dynamicMoveCtr++;
+      $timeout(function () {
+        $scope.marker.coords = {
+          latitude: lat,
+          longitude: lng
+        };
+        $scope.dynamicMoveCtr++;
+      }, 2000);
+    }, 1000);
+})
+
+// .directive('map', function() {
+//   return {
+//         restrict: 'A',
+//         link:function(scope, element, attrs){
+
+//           var zValue = scope.$eval(attrs.zoom);
+//           var lat = scope.$eval(attrs.lat);
+//           var lng = scope.$eval(attrs.lng);
+
+
+//           var myLatlng = new google.maps.LatLng(lat,lng),
+//           mapOptions = {
+//                 zoom: zValue,
+//                 center: myLatlng
+//             },
+//               map = new google.maps.Map(element[0],mapOptions);
+
+
+//         }
+//     };
 // })
 
 .controller('SobreCtrl', function($scope) {

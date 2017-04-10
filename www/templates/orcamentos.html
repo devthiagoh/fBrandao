@@ -1,5 +1,5 @@
-<ion-view view-title="Orçamentos" class="custom">
-  <ion-content>
+<ion-view view-title="Orçamentos" class="custom custom-orcamento">
+  <ion-content class="custom-background">
     <form>
 	    <h4>
 	    	Aqui, seu orçamento sai rapidinho!
@@ -10,65 +10,59 @@
 			Já tem um orçamento de outra empresa? Nos envie e faremos o possível para cobrir, oferecendo mais por menos. Não feche nenhum projeto sem nos consultar. Garantimos que terá uma grande surpresa.
 	    </p>
 
-	    <div class="list list-inset custom">
-		    <div class="row">
-		    	<div class="col-3">
-		  		<label class="item item-input">Empresa:</label>
-		    		
-		    	</div>
-		    	<div class="col-9">
-		    		
+	    <div class="custom Grid">
+		    <div class="Grid-cell">
+		  		<label class="item item-input">Empresa:</label>	
 		  		<input type="text" class="col-12">
-		    	</div>
 		  	</div>
-		    <div class="row">
+		    <div class="Grid-cell">
 		  		<label class="item item-input col-3">Nome do Contato:</label>
 		  		<input type="text" class="col-9">
 		  	</div>
-		    <div class="row">
+		    <div class="Grid-cell">
 		  		<label class="item item-input col-3">Telefone Celular:</label>
 		  		<input type="text" class="col-9">
 		  	</div>
-		    <div class="row">
+		    <div class="Grid-cell">
 		  		<label class="item item-input col-3">Telefone Fixo:</label>
 		  		<input type="text" class="col-9">
 		  	</div>
-		    <div class="row">
+		    <div class="Grid-cell">
 		  		<label class="item item-input col-3">e-Mail:</label>
 		  		<input type="text" class="col-9">
 		  	</div>
-		    <div class="row">
+		    <div class="Grid-cell">
 		  		<label class="item item-input col-3">Como conheceu a FBrandão?</label>
 		  		<input type="text" class="col-9">
+		  	</div>		
+
+			<div class="row">
+			  <div class="col-50">
+			  	<ion-checkbox ng-model="filter.pacote">Pacote</ion-checkbox>
+			  	<ion-checkbox ng-model="filter.assessoria">Assessoria</ion-checkbox>
+			  	<ion-checkbox ng-model="filter.fotografia">Fotografia</ion-checkbox>
+			  	<ion-checkbox ng-model="filter.facebook">Facebook</ion-checkbox>
+			  	<ion-checkbox ng-model="filter.sistema">Sistema</ion-checkbox>
+		  	  </div>
+			  <div class="col-50">
+			  	<ion-checkbox ng-model="filter.hospedagem">Hospedagem</ion-checkbox>
+			  	<ion-checkbox ng-model="filter.google">Google</ion-checkbox>
+			  	<ion-checkbox ng-model="filter.design">Design</ion-checkbox>
+			  	<ion-checkbox ng-model="filter.outros">Outros</ion-checkbox>
+		  	  </div>
+			</div>
+
+			<div class="list list-inset">
+			  	<label class="item item-input">
+			    	<textarea placeholder="Descreva outros detalhes o que deseja:"></textarea>
+			  	</label>
+			  	<label>
+		  			<button class="button button-block custom-btn-orcamento">
+						Enviar
+		  			</button>
+		  		</label>
 		  	</div>
-		</div>
-
-		<div class="row">
-		  <div class="col-50">
-		  	<ion-checkbox ng-model="filter.pacote">Pacote</ion-checkbox>
-		  	<ion-checkbox ng-model="filter.assessoria">Assessoria</ion-checkbox>
-		  	<ion-checkbox ng-model="filter.fotografia">Fotografia</ion-checkbox>
-		  	<ion-checkbox ng-model="filter.facebook">Facebook</ion-checkbox>
-		  	<ion-checkbox ng-model="filter.sistema">Sistema</ion-checkbox>
-	  	  </div>
-		  <div class="col-50">
-		  	<ion-checkbox ng-model="filter.hospedagem">Hospedagem</ion-checkbox>
-		  	<ion-checkbox ng-model="filter.google">Google</ion-checkbox>
-		  	<ion-checkbox ng-model="filter.design">Design</ion-checkbox>
-		  	<ion-checkbox ng-model="filter.outros">Outros</ion-checkbox>
-	  	  </div>
-		</div>
-
-		<div class="list list-inset">
-		  <label class="item item-input">
-		    <textarea placeholder="Descreva outros detalhes o que deseja:"></textarea>
-		  </label>
-		  <label>
-  			<button class="button button-block custom-btn-contatos">
-				Enviar
-  			</button>
-	  	</label>
-	  	</div>	  						
+	  	</div>		  						
 	</form>	  
   </ion-content>
 </ion-view>

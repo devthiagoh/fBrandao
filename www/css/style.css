@@ -86,12 +86,12 @@ p {
 
 .custom input {
 	margin-left: 4%; 
-	width: 70%;
+	width: 92%;
 }
 
-.angular-google-map-container { 
+/*.angular-google-map-container { 
   height: 100%; 
-}
+}*/
 
 /*
 .custom ion-header-bar {
@@ -218,32 +218,21 @@ p {
 }
 
 /* Orçamentos */
-.custom-bg-orcamentos {
-	background-image: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url("../img/background.jpg");
-	background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-}
 
-.custom-bg-orcamentos h4{
-	color: black;
-}
-
-.custom-form-btn button{
+.custom-form-btn button {
   background-color: #6f0909;
   color: white !important;        
 }
 
-/* Opiniões Clientes */
-.custom-opinioes img {
-  max-width: 200px;
-  display: block;
-  margin: 0 auto;
+.custom-orcamento{
+	padding: 6%;
 }
 
-.custom-btn-contatos {
+.custom-orcamento h4 {
+	padding-top: 0%;
+}
+
+.custom-btn-orcamento {
     display: block;
 	margin: 0 auto;
 	width: 337px !important;
@@ -253,3 +242,82 @@ p {
     border-color: transparent;
     border-style: none;
 }
+
+/* Opiniões Clientes */
+.custom-opinioes img {
+  max-width: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+#map {
+    width:98%;
+    height:400px;
+    margin:10px auto;
+    box-shadow:0 3px 25px black;
+    position: relative;
+}
+
+/*.scroll {
+  height: 100%;
+}*/
+
+.angular-google-map-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.custom-bg-contatos {
+  	background-image: url(../img/background_contatos.png);
+  	background-color: #4479ab;
+	color: white;
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 390px;
+    padding: 8%;
+}
+
+.custom-bg-contatos p {
+	padding: 0%;
+	padding-top: 5%;
+	text-align: left;
+}
+
+.custom-bg-home-view-11 {
+  	background-image: url(../img/background_contatos.png);
+  	background-color: #6f0909;
+	color: white;
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    padding: 8%;
+}
+
+.custom-bg-home-view-11 h4 {
+	padding-top: 0%;
+	text-align: left;
+}
+
+.custom-bg-home-view-11 p {
+	padding: 0%;
+	text-align: left;
+}
+
+.checkbox input:checked:before, .checkbox input:checked + .checkbox-icon:before {
+    background: #6f0909;
+    border-color: #ccc;
+}
+
+/* 
+	
+	ionic plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyBZX9y8Dqfiy9YkeGh3HUJ24RAiGWuMqgw" --variable API_KEY_FOR_IOS="AIzaSyCIXqQzMeUWeOFzPY4SEFhPfiiRd_6jpC8"
+	ionic plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="YOUR_ANDROID_API_KEY_IS_HERE" --variable API_KEY_FOR_IOS="YOUR_IOS_API_KEY_IS_HERE"
+
+*/

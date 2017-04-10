@@ -1,4 +1,7 @@
-angular.module('starter', ['ionic', 'starter.controllers', 'module_gallery'])
+var app = angular.module('app', ['ionic', 'starter']);
+
+
+angular.module('starter', ['ionic', 'starter.controllers', 'module_gallery', 'uiGmapgoogle-maps'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -120,7 +123,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'module_gallery'])
     ;
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/splash');
-});
+})
+
+;
 
 
 // angular.module('module_contatos', ['ionic', 'uiGmapgoogle-maps']);
