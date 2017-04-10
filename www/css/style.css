@@ -214,7 +214,7 @@ p {
 	width: 337px !important;
   height: 50px;
 	z-index: 1;
-  background-color: #6f0909 !important;
+  background-color: #831b1c !important;
   border-color: transparent;
   border-style: none;
 }
@@ -246,7 +246,7 @@ p {
 
 .custom-bg-contatos p {
   padding: 0%;
-  padding-top: 5%;
+  padding-top: 10%;
   text-align: left;
 }
 
@@ -274,7 +274,7 @@ p {
   border-color: white !important;
   border-width: 2px;
   border-style: dashed;
-  margin-top: 20%;
+  margin-top: 15% !important;
 }
 
 .custom-bg-contatos i {
@@ -299,4 +299,31 @@ p {
   bottom: 0;
   right: 0;
   left: 0;
+}
+
+.card {
+  margin-top: 1%;
+}
+
+.card .item:last-child, .list-inset .item:last-child {
+  background-color: #6f0909;
+  padding: 0%;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
