@@ -9,7 +9,7 @@
 			Já tem um orçamento de outra empresa? Nos envie e faremos o possível para cobrir, oferecendo mais por menos. Não feche nenhum projeto sem nos consultar. Garantimos que terá uma grande surpresa.
 	    </p>
 	    
-    	<form>
+    	<form ng-controller="OrcamentoCtrl">
 		    <div class="Grid-cell">
 		  		<label class="item item-input">Empresa:</label>	
 		  		<input type="text" class="col-12">
@@ -55,7 +55,7 @@
 		    	<textarea style="width: 100%;" placeholder="Descreva outros detalhes do que deseja:"></textarea>				  	
 		  	</div>
 		  	<div class="row">
-	  			<button class="button button-block">
+	  			<button class="button button-block" ng-click="sendEmail()">
 					Enviar
 	  			</button>
 		  	</div>		  	

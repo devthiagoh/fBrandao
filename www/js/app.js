@@ -1,7 +1,6 @@
-var app = angular.module('app', ['ionic', 'starter']);
+var app = angular.module('app', ['ionic', 'main']);
 
-
-angular.module('starter', ['ionic', 'starter.controllers', 'module_gallery', 'uiGmapgoogle-maps'])
+angular.module('main', ['ionic', 'controllers', 'util.gallery'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -106,7 +105,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'module_gallery', 'ui
       url: '/orcamentos',
       views: {
         'menuContent': {
-          templateUrl: 'templates/orcamentos.html'
+          templateUrl: 'templates/orcamentos.html',
+          controller: 'OrcamentoCtrl'
         }
       }
     })
@@ -123,13 +123,4 @@ angular.module('starter', ['ionic', 'starter.controllers', 'module_gallery', 'ui
     ;
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/splash');
-})
-
-;
-
-
-// angular.module('module_contatos', ['ionic', 'uiGmapgoogle-maps']);
-
-
-
-
+});

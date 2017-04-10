@@ -1,4 +1,4 @@
-angular.module('module_gallery', ['ionic','ion-gallery'])
+angular.module('util.gallery', ['ionic','ion-gallery'])
 
 app.config(function($ionGalleryConfigProvider) {
   $ionGalleryConfigProvider.setGalleryConfig({

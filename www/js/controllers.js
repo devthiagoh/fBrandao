@@ -1,4 +1,4 @@
-angular.module('starter.controllers', ['ionic', 'module_gallery', 'uiGmapgoogle-maps'])
+angular.module('controllers', ['ionic', 'uiGmapgoogle-maps'])
 
 .controller('SplashCtrl', function($scope, $ionicModal, $state, $timeout) {
   
@@ -25,9 +25,8 @@ angular.module('starter.controllers', ['ionic', 'module_gallery', 'uiGmapgoogle-
 
 .controller('HomeCtrl', function($scope) {
   $scope.options = {
-    // autoplay: 2500,
     loop: false,
-    speed: 1000,
+    speed: 100,
     slidesPerView: 1,
     centeredSlides: true
   } 
@@ -150,6 +149,25 @@ angular.module('starter.controllers', ['ionic', 'module_gallery', 'uiGmapgoogle-
     $scope.activeIndex = data.slider.activeIndex;
     $scope.previousIndex = data.slider.previousIndex;
   }); 
+})
+
+.controller('OrcamentoCtrl', function($scope) {
+    $scope.sendEmail = function() {
+        console.log('enviando emaillll...');
+        // if(window.plugins && window.plugins.emailComposer) {
+            window.plugins.emailComposer.showEmailComposerWithCallback(function(result) {
+                console.log("Response -> " + result);
+            }, 
+            "Feedback for your App", // Subject
+            "",                      // Body
+            ["test@example.com"],    // To
+            null,                    // CC
+            null,                    // BCC
+            false,                   // isHTML
+            null,                    // Attachments
+            null);                   // Attachment Data
+        // }         
+    }
 })
 
 .controller('ContatosCtrl', function($scope, $log, $timeout) {
