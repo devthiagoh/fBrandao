@@ -9,8 +9,9 @@
   </author>
     <content src="index.html" />
     <access origin="*" />
-    <access origin="tel:*" launch-external="yes"/>
-    <allow-navigation href="*://*.youtube.com/*" />
+    <access origin="*://*" launch-external="yes"/>
+    <access launch-external="yes" origin="tel:*" />
+    <!-- <allow-navigation href="*://*.youtube.com/*" /> -->
     <preference name="webviewbounce" value="false" />
     <preference name="UIWebViewBounce" value="false" />
     <preference name="DisallowOverscroll" value="true" />
