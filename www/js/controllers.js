@@ -174,9 +174,20 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps'])
       var email = $scope.cliente.email;
       var resposta = $scope.cliente.resposta;
       
-      var mensagem = '';
+      var mensagem = 'Dados do cliente:<br/><br/>';
 
-      if(resposta != '') {mensagem += '<br/>Como conheceu a FBrandão?<br/>'+ resposta}
+      if(empresa != '') { 
+        mensagem += ' - Empresa: ' + empresa;
+      } else {
+        mensagem += ' - Empresa: Não informada';
+      }
+
+      mensagem += ' <br/>- Nome: ' +nome+
+                  ' <br/>- Telefone Celular: ' +cel+
+                  ' <br/>- Telefone Fixo: ' +fixo+
+                  ' <br/>- e-Mail: ' +email;
+
+      if(resposta != '') {mensagem += '<br/><br/>Como conheceu a FBrandão?<br/>'+ resposta;}
 
       /* produtos */ 
       var pacote = $scope.cliente.produtos.pacote;
@@ -206,8 +217,8 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps'])
 
       if(detalhes != ''){mensagem += '<br/><br/>Detalhes:<br/><br/>' +detalhes;}
 
-      // var send_to = "devthiagoh@gmail.com";
-      var send_to = "fabiano@fbrandao.com.br";
+      var send_to = "devthiagoh@gmail.com";
+      // var send_to = "fabiano@fbrandao.com.br";
       var cc = "app@fbrandao.com.br";
 
       console.log('enviando emaillll...');
@@ -287,6 +298,9 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps'])
   $scope.goToOrcamento = function(){
     $state.go('menu.orcamentos');  
   };
+  
+      $scope.item_error = {"color" : "#db460e"}
+  
 })
 
 .controller('SobreCtrl', function($scope) {

@@ -8,62 +8,80 @@
 
 			Já tem um orçamento de outra empresa? Nos envie e faremos o possível para cobrir, oferecendo mais por menos. Não feche nenhum projeto sem nos consultar. Garantimos que terá uma grande surpresa.
 	    </p>
-	    
-    	<form ng-controller="OrcamentoCtrl" ng-model="cliente">
-		    <div class="Grid-cell">
-		  		<label class="item item-input">Empresa:</label>	
-		  		<input type="text" class="col-12" ng-model="cliente.empresa">
-		  	</div>
-		    <div class="Grid-cell">
-		  		<label class="item item-input col-3">Nome do Contato:</label>
-		  		<input type="text" class="col-9" ng-required="true" repeat="30" ng-model="cliente.nome">
-		  	</div>
-		    <div class="Grid-cell">
-		  		<label class="item item-input col-3">Telefone Celular:</label>
-		  		<input type="text" class="col-9" ng-required="true" mask="+99 99 9?9999-9999" ng-model="cliente.cel">
-		  	</div>
-		    <div class="Grid-cell">
-		  		<label class="item item-input col-3">Telefone Fixo:</label>
-		  		<input type="text" class="col-9" ng-required="true" mask="+99 99 9?9999-9999" ng-model="cliente.fixo">
-		  	</div>
-		    <div class="Grid-cell">
-		  		<label class="item item-input col-3">e-Mail:</label>
-		  		<input type="text" class="col-9" ng-required="true" ng-model="cliente.email">
-		  	</div>
-		    <div class="Grid-cell">
-		  		<label class="item item-input col-3">Como conheceu a FBrandão?</label>
-		  		<input type="text" class="col-9" ng-model="cliente.resposta">
-		  	</div>
-			
-			<div class="Grid-cell">
-			  
-		  	  <label class="item item-input col-3">Qual produto deseja?</label>
-			  
-			  <div class="row">
-				  <div class="col-50">
-				  	<ion-checkbox ng-model="cliente.produtos.pacote">Pacote</ion-checkbox>
-				  	<ion-checkbox ng-model="cliente.produtos.assessoria">Assessoria</ion-checkbox>
-				  	<ion-checkbox ng-model="cliente.produtos.fotografia">Fotografia</ion-checkbox>
-				  	<ion-checkbox ng-model="cliente.produtos.facebook">Facebook</ion-checkbox>
-				  	<ion-checkbox ng-model="cliente.produtos.sistema">Sistema</ion-checkbox>
+	    <div style="margin-top: -8%;">
+	    	<form ng-controller="OrcamentoCtrl" ng-model="cliente" name="formOrcamento" novalidate>
+			    <div class="Grid-cell">
+			  		<label class="item item-input">Empresa:</label>	
+			  		<input type="text" class="col-12" ng-model="cliente.empresa">
+			  	</div>
+			    <div class="Grid-cell">
+			  		<label class="item item-input col-3">Nome do Contato*:</label>
+			  		<input type="text" class="col-9" repeat="30" ng-model="cliente.nome" name="nome" required>
+			  		<label ng-show="formOrcamento.nome.$error.required && !formOrcamento.nome.$pristine" 
+			  			   class="item" 
+			  			   style="color: #db460e; display: initial;">
+			  			   * Informe o nome
+	  			   	</label>
+			  	</div>
+			    <div class="Grid-cell">
+			  		<label class="item item-input col-3">Telefone Celular*:</label>
+			  		<input type="text" class="col-9" mask="(99) 9?9999-9999" ng-model="cliente.cel" name="cel" required>
+			  		<label ng-show="formOrcamento.cel.$error.required && !formOrcamento.cel.$pristine" 
+			  			   class="item" 
+			  			   style="color: #db460e; display: initial;">
+			  			   * Informe o telefone celular
+	  			   	</label>
+			  	</div>
+			    <div class="Grid-cell">
+			  		<label class="item item-input col-3">Telefone Fixo:</label>
+			  		<input type="text" class="col-9" mask="(99) 9?9999-9999" ng-model="cliente.fixo">
+			  	</div>
+			    <div class="Grid-cell">
+			  		<label class="item item-input col-3">e-Mail*:</label>
+			  		<input type="text" class="col-9" ng-model="cliente.email" name="email" required>
+	            	<label ng-show="formOrcamento.email.$invalid && !formOrcamento.email.$pristine" 
+			  			   class="item" 
+			  			   style="color: #db460e; display: initial;">
+			  			   * Informe um e-mail válido
+	  			   	</label>
+			  	</div>
+			    <div class="Grid-cell">
+			  		<label class="item item-input col-3">Como conheceu a FBrandão?</label>
+			  		<input type="text" class="col-9" ng-model="cliente.resposta">
+			  	</div>
+				
+				<div class="Grid-cell">
+				  
+			  	  <label class="item item-input col-3">Qual produto deseja?</label>
+				  
+				  <div class="row">
+					  <div class="col-30">
+					  	<ion-checkbox ng-model="cliente.produtos.pacote">Pacote</ion-checkbox>
+					  	<ion-checkbox ng-model="cliente.produtos.assessoria">Assessoria</ion-checkbox>
+					  	<ion-checkbox ng-model="cliente.produtos.fotografia">Fotografia</ion-checkbox>
+				  	  </div>
+					  <div class="col-30">
+					  	<ion-checkbox ng-model="cliente.produtos.facebook">Facebook</ion-checkbox>
+					  	<ion-checkbox ng-model="cliente.produtos.sistema">Sistema</ion-checkbox>
+					  	<ion-checkbox ng-model="cliente.produtos.hospedagem">Hospedagem</ion-checkbox>
+				  	  </div>
+					  <div class="col-30">
+					  	<ion-checkbox ng-model="cliente.produtos.google">Google</ion-checkbox>
+					  	<ion-checkbox ng-model="cliente.produtos.design">Design</ion-checkbox>
+					  	<ion-checkbox ng-model="cliente.produtos.outros">Outros</ion-checkbox>
+				  	  </div>
 			  	  </div>
-				  <div class="col-50">
-				  	<ion-checkbox ng-model="cliente.produtos.hospedagem">Hospedagem</ion-checkbox>
-				  	<ion-checkbox ng-model="cliente.produtos.google">Google</ion-checkbox>
-				  	<ion-checkbox ng-model="cliente.produtos.design">Design</ion-checkbox>
-				  	<ion-checkbox ng-model="cliente.produtos.outros">Outros</ion-checkbox>
-			  	  </div>
-		  	  </div>
-	  	  	</div>
-			
-		    <div class="row">				  	
-		    	<textarea style="width: 100%;" placeholder="Descreva outros detalhes do que deseja:" ng-model="cliente.detalhes"></textarea>				  	
-		  	</div>
-		  	<div class="row">
-	  			<button class="button button-block" ng-click="sendEmail(cliente)">
-					Enviar
-	  			</button>
-		  	</div>		  	
-		</form>	 						
+		  	  	</div>
+				
+			    <div class="row">				  	
+			    	<textarea style="width: 100%;" placeholder="Descreva outros detalhes do que deseja:" ng-model="cliente.detalhes"></textarea>				  	
+			  	</div>
+			  	<div class="row">
+		  			<button class="button button-block" ng-click="sendEmail(cliente)" ng-disabled="formOrcamento.$invalid">
+						Enviar
+		  			</button>
+			  	</div>		  	
+			</form>	
+		</div> 						
   </ion-content>
 </ion-view>
