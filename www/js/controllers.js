@@ -8,19 +8,10 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps'])
     $scope.modal = modal;
   });
 
-  // $scope.signIn = function(user) {
-  //   console.log('Fazendo login...', user);
-  //   $state.go('menu.home');
-  // };
-
   $timeout(function() {
       $state.go('menu.home');
   }, 3000); 
  
-})
-
-.controller('MenuCtrl', function($scope) {
-
 })
 
 .controller('HomeCtrl', function($scope) {
@@ -154,23 +145,11 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps'])
 .controller('OrcamentoCtrl', function($scope) {
     $scope.sendEmail = function() {
         console.log('enviando emaillll...');
-        // if(window.plugins && window.plugins.emailComposer) {
-            window.plugins.emailComposer.showEmailComposerWithCallback(function(result) {
-                console.log("Response -> " + result);
-            }, 
-            "Feedback for your App", // Subject
-            "",                      // Body
-            ["test@example.com"],    // To
-            null,                    // CC
-            null,                    // BCC
-            false,                   // isHTML
-            null,                    // Attachments
-            null);                   // Attachment Data
-        // }         
+                 
     }
 })
 
-.controller('ContatosCtrl', function($scope, $log, $timeout) {
+.controller('ContatosCtrl', function($scope, $log, $state, $timeout) {
 
   var lat = -20.3079033;
   var lng = -40.2961303;
@@ -186,53 +165,58 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps'])
   //             };
 
   $scope.map = {center: {latitude: lat, longitude: lng }, zoom: zoomMap };
-    $scope.map = {center: {latitude: lat, longitude: lng }, zoom: zoomMap };
-    $scope.options = {scrollwheel: false};
-    $scope.coordsUpdates = 0;
-    $scope.dynamicMoveCtr = 0;
-    $scope.marker = {
-      id: 0,
-      coords: {
-        latitude: lat,
-        longitude: lng
-      },
-      options: { draggable: true },
-      events: {
-        dragend: function (marker, eventName, args) {
-          $log.log('marker dragend');
-          var lat = marker.getPosition().lat();
-          var lon = marker.getPosition().lng();
-          $log.log(lat);
-          $log.log(lon);
+  $scope.options = {scrollwheel: false};
+  $scope.coordsUpdates = 0;
+  $scope.dynamicMoveCtr = 0;
+  $scope.marker = {
+    id: 0,
+    coords: {
+      latitude: lat,
+      longitude: lng
+    },
+    options: { draggable: true },
+    events: {
+      dragend: function (marker, eventName, args) {
+        $log.log('marker dragend');
+        var lat = marker.getPosition().lat();
+        var lon = marker.getPosition().lng();
+        $log.log(lat);
+        $log.log(lon);
 
-          $scope.marker.options = {
-            draggable: true,
-            labelContent: "lat: " + $scope.marker.coords.latitude + ' ' + 'lon: ' + $scope.marker.coords.longitude,
-            labelAnchor: "100 0",
-            labelClass: "marker-labels"
-          };
-        }
+        $scope.marker.options = {
+          draggable: true,
+          labelContent: "lat: " + $scope.marker.coords.latitude + ' ' + 'lon: ' + $scope.marker.coords.longitude,
+          labelAnchor: "100 0",
+          labelClass: "marker-labels"
+        };
       }
-    };
-    $scope.$watchCollection("marker.coords", function (newVal, oldVal) {
-      if (_.isEqual(newVal, oldVal))
-        return;
-      $scope.coordsUpdates++;
-    });
+    }
+  };
+
+  $scope.$watchCollection("marker.coords", function (newVal, oldVal) {
+    if (_.isEqual(newVal, oldVal))
+      return;
+    $scope.coordsUpdates++;
+  });
+
+  $timeout(function () {
+    $scope.marker.coords = {
+      latitude: lat,
+      longitude: lng
+    };  
+    $scope.dynamicMoveCtr++;  
     $timeout(function () {
       $scope.marker.coords = {
         latitude: lat,
         longitude: lng
       };
       $scope.dynamicMoveCtr++;
-      $timeout(function () {
-        $scope.marker.coords = {
-          latitude: lat,
-          longitude: lng
-        };
-        $scope.dynamicMoveCtr++;
-      }, 2000);
-    }, 1000);
+    }, 2000);
+  }, 1000);
+
+  $scope.goToOrcamento = function(){
+    $state.go('menu.orcamentos');  
+  };
 })
 
 // .directive('map', function() {

@@ -27,8 +27,7 @@ angular.module('main', ['ionic', 'controllers', 'util.gallery'])
     .state('menu', {
       url: '/menu',
       abstract: true,
-      templateUrl: 'templates/menu.html',
-      controller: 'MenuCtrl'
+      templateUrl: 'templates/menu.html'
     })
 
     .state('menu.home', {
