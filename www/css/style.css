@@ -201,6 +201,7 @@ p {
 
 .custom-orcamento textarea {
 	width: 100;
+  height: 100px;
 }
 
 .checkbox input:checked:before, .checkbox input:checked + .checkbox-icon:before {
@@ -217,6 +218,31 @@ p {
   background-color: #831b1c !important;
   border-color: transparent;
   border-style: none;
+}
+
+.popup-head{
+  background: #6f0909  !important;
+  padding: 0%; 
+  border-bottom: none;
+}
+
+.popup-body{
+  background: #4c1211 !important;
+  color:#fff !important;
+  font-size:18px !important;
+  font-family: customFont;
+  text-align: center;
+  font-weight: 100;
+}
+
+.popup-buttons {
+  background-color: #4c1211 !important;
+  color:#fff !important;
+}
+
+.popup-buttons button {
+  background-color: #6f0909 !important;
+  color:#fff !important;
 }
 
 /**************************** Opiniões Clientes ****************************/

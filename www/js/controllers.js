@@ -142,11 +142,90 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps'])
   }); 
 })
 
-.controller('OrcamentoCtrl', function($scope) {
-    $scope.sendEmail = function() {
-        console.log('enviando emaillll...');
-                 
-    }
+.controller('OrcamentoCtrl', function($scope, $stateParams, $ionicPopup) {
+    
+  $scope.cliente = {
+    'empresa' : '',
+    'nome' : '',
+    'cel' : '',
+    'fixo' : '',
+    'email' : '',
+    'resposta' : '',
+    'produtos' : {
+      'pacote' : false,
+      'assessoria' : false,
+      'fotografia' : false,
+      'facebook' : false,
+      'sistema' : false,
+      'hospedagem' : false,
+      'google' : false,
+      'design' : false,
+      'outros' : false
+    },
+    'detalhes' : ''
+  };
+
+  $scope.sendEmail = function($stateParams) {
+
+      var empresa = $scope.cliente.empresa;
+      var nome = $scope.cliente.nome;
+      var cel = $scope.cliente.cel;
+      var fixo = $scope.cliente.fixo;
+      var email = $scope.cliente.email;
+      var resposta = $scope.cliente.resposta;
+      
+      var mensagem = '';
+
+      if(resposta != '') {mensagem += '<br/>Como conheceu a FBrandão?<br/>'+ resposta}
+
+      /* produtos */ 
+      var pacote = $scope.cliente.produtos.pacote;
+      var assessoria = $scope.cliente.produtos.assessoria;
+      var fotografia = $scope.cliente.produtos.fotografia;
+      var facebook = $scope.cliente.produtos.facebook;
+      var sistema = $scope.cliente.produtos.sistema;
+      var hospedagem = $scope.cliente.produtos.hospedagem;
+      var google = $scope.cliente.produtos.google;
+      var design = $scope.cliente.produtos.design;
+      var outros = $scope.cliente.produtos.outros;
+
+      var detalhes = $scope.cliente.detalhes;
+      
+      var produtos = '';
+      if(pacote     == true){produtos += '- Pacote<br/>';}      
+      if(assessoria == true){produtos += '- Assessoria<br/>';}      
+      if(fotografia == true){produtos += '- Fotografia<br/>';}      
+      if(facebook   == true){produtos += '- Facebook<br/>';}      
+      if(sistema    == true){produtos += '- Sistema<br/>';}      
+      if(hospedagem == true){produtos += '- Hospedagem<br/>';}      
+      if(google == true){produtos += '- Google<br/>';}      
+      if(design == true){produtos += '- Design<br/>';}      
+      if(outros == true){produtos += '- Outros<br/>';}
+      
+      mensagem += '<br/><br/>Produtos solicitados: <br/>' + produtos;
+
+      if(detalhes != ''){mensagem += '<br/><br/>Detalhes:<br/><br/>' +detalhes;}
+
+      // var send_to = "devthiagoh@gmail.com";
+      var send_to = "fabiano@fbrandao.com.br";
+      var cc = "app@fbrandao.com.br";
+
+      console.log('enviando emaillll...');
+      emailjs.send("smtp_fbrandao_id","template_fbrandao_id", 
+        {
+          send_to: send_to,
+          reply_to: "",
+          cc: cc, 
+          cliente: nome,
+          emailCliente: email, 
+          mensagem: mensagem
+        });
+
+      $ionicPopup.alert({
+          template: 'Solicitação de orçamento enviada com sucesso.<br/><br/> Em breve entraremos em contatos com você.<br/><br/> Obrigado !!!',
+          buttons: [{ text: 'Fechar' }]
+      })      
+  }
 })
 
 .controller('ContatosCtrl', function($scope, $log, $state, $timeout) {
@@ -154,15 +233,6 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps'])
   var lat = -20.3079033;
   var lng = -40.2961303;
   var zoomMap = 16;
-  
-  // $scope.map = { 
-  //               center: 
-  //                 { 
-  //                   latitude: lat, 
-  //                   longitude: lng 
-  //                 }, 
-  //                 zoom: zoomMap
-  //             };
 
   $scope.map = {center: {latitude: lat, longitude: lng }, zoom: zoomMap };
   $scope.options = {scrollwheel: false};
@@ -218,28 +288,6 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps'])
     $state.go('menu.orcamentos');  
   };
 })
-
-// .directive('map', function() {
-//   return {
-//         restrict: 'A',
-//         link:function(scope, element, attrs){
-
-//           var zValue = scope.$eval(attrs.zoom);
-//           var lat = scope.$eval(attrs.lat);
-//           var lng = scope.$eval(attrs.lng);
-
-
-//           var myLatlng = new google.maps.LatLng(lat,lng),
-//           mapOptions = {
-//                 zoom: zValue,
-//                 center: myLatlng
-//             },
-//               map = new google.maps.Map(element[0],mapOptions);
-
-
-//         }
-//     };
-// })
 
 .controller('SobreCtrl', function($scope) {
   $scope.items = [{src:'img/foto_01.jpg'}, {src:'img/foto_02.jpg'}, {src:'img/foto_03.jpg'},
