@@ -1,0 +1,73 @@
+<ion-view view-title="Sugestões" class="custom custom-orcamento">
+  <ion-content >
+	    <h4>
+	    	Elogios, Críticas, Sugestões e Reclamações
+	    </h4>
+	    <p>
+			Preencha todos os campos se for possível para que possamos lhe oferecer o projeto mais adequado. Ao receber sua solicitação, nosso Setor Comercial irá analisa-la e enviar o melhor projeto dentro de suas condições. Em seguida, entraremos em contato para tirarmos todas as suas dúvidas.
+	    </p>
+	    <div style="margin-top: -8%;">
+	    	<form ng-controller="SugestoesCtrl" ng-model="sugestao" name="formSugestao" novalidate>
+			    <div class="Grid-cell">
+			  		<label class="item item-input">Empresa:</label>	
+			  		<input type="text" class="col-12" ng-model="cliente.empresa">
+			  	</div>
+			    <div class="Grid-cell">
+			  		<label class="item item-input col-3">Nome do Contato*:</label>
+			  		<input type="text" class="col-9" repeat="30" ng-model="cliente.nome" name="nome" required>
+			  		<label ng-show="formSugestao.nome.$error.required && !formSugestao.nome.$pristine" 
+			  			   class="item" 
+			  			   style="color: #db460e; display: initial;">
+			  			   * Informe o nome
+	  			   	</label>
+			  	</div>
+			    <div class="Grid-cell">
+			  		<label class="item item-input col-3">Telefone Celular*:</label>
+			  		<input type="text" class="col-9" mask="(99) 9?9999-9999" ng-model="cliente.cel" name="cel" required>
+			  		<label ng-show="formSugestao.cel.$error.required && !formSugestao.cel.$pristine" 
+			  			   class="item" 
+			  			   style="color: #db460e; display: initial;">
+			  			   * Informe o telefone celular
+	  			   	</label>
+			  	</div>
+			    <div class="Grid-cell">
+			  		<label class="item item-input col-3">Telefone Fixo:</label>
+			  		<input type="text" class="col-9" mask="(99) 9?9999-9999" ng-model="cliente.fixo">
+			  	</div>
+			    <div class="Grid-cell">
+			  		<label class="item item-input col-3">e-Mail*:</label>
+			  		<input type="text" class="col-9" ng-model="cliente.email" name="email" required>
+	            	<label ng-show="formSugestao.email.$invalid && !formSugestao.email.$pristine" 
+			  			   class="item" 
+			  			   style="color: #db460e; display: initial;">
+			  			   * Informe um e-mail válido
+	  			   	</label>
+			  	</div>				
+				
+				<div class="Grid-cell">				  
+			  	  <label class="item item-input col-3">Qual solicitação deseja?</label>				  
+				  <div class="row col-100">
+				  	<div class="col-50">
+					  	<ion-checkbox ng-model="sugestao.tipos.elogio">Elogio</ion-checkbox>
+					  	<ion-checkbox ng-model="sugestao.tipos.sugestao">Sugestão</ion-checkbox>
+				  	</div>
+				  	<div class="col-50">
+					  	<ion-checkbox ng-model="sugestao.tipos.critica">Crítica</ion-checkbox>
+					  	<ion-checkbox ng-model="sugestao.tipos.reclamacao">Reclamação</ion-checkbox>
+				  	</div>
+			  	  </div>
+		  	  	</div>
+
+			    <div class="row" style="padding: 15px;">				  	
+			    	<textarea style="width: 100%;" placeholder="Descreva os detalhes:" ng-model="sugestao.detalhes"></textarea>				  	
+			  	</div>
+
+			  	<div class="row">
+		  			<button class="button button-block" ng-click="sendEmail(sugestao)" ng-disabled="formSugestao.$invalid">
+						Enviar
+		  			</button>
+			  	</div>		  	
+			</form>	
+		</div> 						
+  </ion-content>
+</ion-view>

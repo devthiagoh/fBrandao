@@ -36,18 +36,9 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps'])
   }); 
 })
 
-.controller('ListServicosCtrl', function($scope) {
-  $scope.servicos = [
-    { title: 'Sites', id: 1 },
-    { title: 'Hospedagem', id: 2 },
-    { title: 'Sites Mobile', id: 3 },
-    { title: 'Logos', id: 4 },
-    { title: 'Design Gráfico', id: 5 },
-    { title: 'Assessoria Mensal', id: 6 },
-    { title: 'Fotografias', id: 7 },
-    { title: 'Marketing Digital', id: 8 },
-    { title: 'Produção de Vídeos', id: 9 }
-  ];
+.controller('SobreCtrl', function($scope) {
+  $scope.items = [{src:'img/foto_01.jpg'}, {src:'img/foto_02.jpg'}, {src:'img/foto_03.jpg'},
+                  {src:'img/foto_04.jpg'}, {src:'img/foto_05.jpg'}, {src:'img/foto_06.jpg'}]
 })
 
 .controller('ServicosCtrl', function($scope, $stateParams) {
@@ -86,13 +77,17 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps'])
 
 })
 
-.controller('ListPortifolioCtrl', function($scope) {
-  $scope.portifolios = [
+.controller('ListServicosCtrl', function($scope) {
+  $scope.servicos = [
     { title: 'Sites', id: 1 },
-    { title: 'Logos', id: 2 },
-    { title: 'Artes Gráficas', id: 3 },
-    { title: 'Fotografias', id: 4 },
-    { title: 'Fanpages', id: 5 }
+    { title: 'Hospedagem', id: 2 },
+    { title: 'Sites Mobile', id: 3 },
+    { title: 'Logos', id: 4 },
+    { title: 'Design Gráfico', id: 5 },
+    { title: 'Assessoria Mensal', id: 6 },
+    { title: 'Fotografias', id: 7 },
+    { title: 'Marketing Digital', id: 8 },
+    { title: 'Produção de Vídeos', id: 9 }
   ];
 })
 
@@ -117,6 +112,16 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps'])
     if(opcao.id == 5){
       $scope.fanpages = true;
     }
+})
+
+.controller('ListPortifolioCtrl', function($scope) {
+  $scope.portifolios = [
+    { title: 'Sites', id: 1 },
+    { title: 'Logos', id: 2 },
+    { title: 'Artes Gráficas', id: 3 },
+    { title: 'Fotografias', id: 4 },
+    { title: 'Fanpages', id: 5 }
+  ];
 })
 
 .controller('OpinioesCtrl', function($scope) {
@@ -199,8 +204,6 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps'])
       var google = $scope.cliente.produtos.google;
       var design = $scope.cliente.produtos.design;
       var outros = $scope.cliente.produtos.outros;
-
-      var detalhes = $scope.cliente.detalhes;
       
       var produtos = '';
       if(pacote     == true){produtos += '- Pacote<br/>';}      
@@ -215,6 +218,8 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps'])
       
       mensagem += '<br/><br/>Produtos solicitados: <br/>' + produtos;
 
+      var detalhes = $scope.cliente.detalhes;
+     
       if(detalhes != ''){mensagem += '<br/><br/>Detalhes:<br/><br/>' +detalhes;}
 
       var send_to = "devthiagoh@gmail.com";
@@ -297,15 +302,149 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps'])
 
   $scope.goToOrcamento = function(){
     $state.go('menu.orcamentos');  
-  };
-  
-      $scope.item_error = {"color" : "#db460e"}
-  
+  };  
 })
 
-.controller('SobreCtrl', function($scope) {
-  $scope.items = [{src:'img/foto_01.jpg'}, {src:'img/foto_02.jpg'}, {src:'img/foto_03.jpg'},
-                  {src:'img/foto_04.jpg'}, {src:'img/foto_05.jpg'}, {src:'img/foto_06.jpg'}]
+.controller('SugestoesCtrl', function($scope, $stateParams, $ionicPopup) {
+    
+  $scope.cliente = {
+    'empresa' : '',
+    'nome' : '',
+    'cel' : '',
+    'fixo' : '',
+    'email' : ''
+  };
+
+  $scope.sugestao = {
+    'tipos' : {
+      'elogio' : false,
+      'sugestao' : false,
+      'critica' : false,
+      'reclamacao' : false
+    },
+    'detalhes' : ''
+  };
+
+  $scope.sendEmail = function($stateParams) {
+
+      var empresa = $scope.cliente.empresa;
+      var nome = $scope.cliente.nome;
+      var cel = $scope.cliente.cel;
+      var fixo = $scope.cliente.fixo;
+      var email = $scope.cliente.email;
+      
+      var mensagem = 'Dados do cliente:<br/><br/>';
+
+      if(empresa != '') { 
+        mensagem += ' - Empresa: ' + empresa;
+      } else {
+        mensagem += ' - Empresa: Não informada';
+      }
+
+      mensagem += ' <br/>- Nome: ' +nome+
+                  ' <br/>- Telefone Celular: ' +cel+
+                  ' <br/>- Telefone Fixo: ' +fixo+
+                  ' <br/>- e-Mail: ' +email;
+
+      /* tipos */ 
+      var elogio = $scope.sugestao.tipos.elogio;
+      var sugestao = $scope.sugestao.tipos.sugestao;
+      var critica = $scope.sugestao.tipos.critica;
+      var reclamacao = $scope.sugestao.tipos.reclamacao;
+      
+      var tipos = '';
+      if(elogio     == true){tipos += '- Elogio<br/>';}      
+      if(sugestao   == true){tipos += '- Sugestão<br/>';}      
+      if(critica    == true){tipos += '- Crítica<br/>';}      
+      if(reclamacao == true){tipos += '- Reclamação<br/>';}
+      
+      mensagem += '<br/><br/>Tipo solicitação: <br/>' + tipos;
+
+      var detalhes = $scope.sugestao.detalhes;
+
+      if(detalhes != ''){mensagem += '<br/><br/>Detalhes:<br/><br/>' +detalhes;}
+
+      var send_to = "devthiagoh@gmail.com";
+      // var send_to = "fabiano@fbrandao.com.br";
+      var cc = "app@fbrandao.com.br";
+
+      console.log('enviando emaillll...');
+      emailjs.send("smtp_fbrandao_id","template_fbrandao_id", 
+        {
+          send_to: send_to,
+          reply_to: "",
+          cc: cc, 
+          cliente: nome,
+          emailCliente: email, 
+          mensagem: mensagem
+        });
+
+      $ionicPopup.alert({
+          template: 'Solicitação enviada com sucesso.<br/><br/> Obrigado !!!',
+          buttons: [{ text: 'Fechar' }]
+      })      
+  }
+})
+
+.controller('HelpDeskCtrl', function($scope, $stateParams, $ionicPopup) {
+       
+  $scope.cliente = {
+    'empresa' : '',
+    'nome' : '',
+    'cel' : '',
+    'fixo' : '',
+    'email' : ''
+  };
+
+  $scope.solicitacao = {
+    'detalhes' : ''
+  }
+
+  $scope.sendEmail = function($stateParams) {
+
+      var empresa = $scope.cliente.empresa;
+      var nome = $scope.cliente.nome;
+      var cel = $scope.cliente.cel;
+      var fixo = $scope.cliente.fixo;
+      var email = $scope.cliente.email;
+      
+      var mensagem = 'Dados do cliente:<br/><br/>';
+
+      if(empresa != '') { 
+        mensagem += ' - Empresa: ' + empresa;
+      } else {
+        mensagem += ' - Empresa: Não informada';
+      }
+
+      mensagem += ' <br/>- Nome: ' +nome+
+                  ' <br/>- Telefone Celular: ' +cel+
+                  ' <br/>- Telefone Fixo: ' +fixo+
+                  ' <br/>- e-Mail: ' +email;
+
+      var detalhes = $scope.solicitacao.detalhes;
+
+      if(detalhes != ''){mensagem += '<br/><br/>Detalhes:<br/><br/>' +detalhes;}
+
+      var send_to = "devthiagoh@gmail.com";
+      // var send_to = "fabiano@fbrandao.com.br";
+      var cc = "app@fbrandao.com.br";
+
+      console.log('enviando emaillll...');
+      emailjs.send("smtp_fbrandao_id","template_fbrandao_id", 
+        {
+          send_to: send_to,
+          reply_to: "",
+          cc: cc, 
+          cliente: nome,
+          emailCliente: email, 
+          mensagem: mensagem
+        });
+
+      $ionicPopup.alert({
+          template: 'Solicitação enviada com sucesso.<br/><br/> Obrigado !!!',
+          buttons: [{ text: 'Fechar' }]
+      })      
+  }
 })
 
 ;

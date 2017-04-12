@@ -221,13 +221,13 @@ p {
 }
 
 .item-checkbox {
-    padding-left: 46px;
+    /*padding-left: 46px;*/
 }
 
 .custom-orcamento button {
   display: block;
   margin: 0 auto;
-  width: 337px !important;
+  /*width: 337px !important;*/
   height: 50px;
   z-index: 1;
   background-color: #831b1c !important;
@@ -309,13 +309,13 @@ p {
 }
 
 .custom-bg-contatos button {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 100;
   border-radius: 50px 50px 50px 50px;
   border-color: white !important;
   border-width: 2px;
   border-style: dashed;
-  margin-top: 15% !important;
+  margin-top: 6% !important;
 }
 
 .custom-bg-contatos i {

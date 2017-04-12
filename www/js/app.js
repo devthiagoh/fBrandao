@@ -119,6 +119,26 @@ angular.module('main', ['ionic', 'controllers', 'util.gallery'])
         }
       }
     })
+
+    .state('menu.sugestoes', {
+      url: '/sugestoes',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/sugestoes.html',
+          controller: 'SugestoesCtrl'
+        }
+      }
+    })
+
+    .state('menu.helpdesk', {
+      url: '/helpdesk',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/help_desk.html',
+          controller: 'HelpDeskCtrl'
+        }
+      }
+    })
     ;
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/splash');
