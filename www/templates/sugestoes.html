@@ -23,7 +23,7 @@
 			  	</div>
 			    <div class="Grid-cell">
 			  		<label class="item item-input col-3">Telefone Celular*:</label>
-			  		<input type="text" class="col-9" mask="(99) 9?9999-9999" ng-model="cliente.cel" name="cel" required>
+			  		<input type="tel" class="col-9" ui-mask="(99) 9?9999-9999" ng-model="cliente.cel" name="cel" required>
 			  		<label ng-show="formSugestao.cel.$error.required && !formSugestao.cel.$pristine" 
 			  			   class="item" 
 			  			   style="color: #db460e; display: initial;">
@@ -32,11 +32,11 @@
 			  	</div>
 			    <div class="Grid-cell">
 			  		<label class="item item-input col-3">Telefone Fixo:</label>
-			  		<input type="text" class="col-9" mask="(99) 9?9999-9999" ng-model="cliente.fixo">
+			  		<input type="tel" class="col-9" ui-mask="(99) 9?9999-9999" ng-model="cliente.fixo">
 			  	</div>
 			    <div class="Grid-cell">
 			  		<label class="item item-input col-3">e-Mail*:</label>
-			  		<input type="text" class="col-9" ng-model="cliente.email" name="email" required>
+			  		<input type="email" class="col-9" ng-model="cliente.email" name="email" required>
 	            	<label ng-show="formSugestao.email.$invalid && !formSugestao.email.$pristine" 
 			  			   class="item" 
 			  			   style="color: #db460e; display: initial;">
@@ -63,7 +63,7 @@
 			  	</div>
 
 			  	<div class="row">
-		  			<button class="button button-block" ng-click="sendEmail(sugestao)" ng-disabled="formSugestao.$invalid">
+		  			<button class="button button-block" ng-click="confirmarEnvio(sugestao)" ng-disabled="formSugestao.$invalid">
 						Enviar
 		  			</button>
 			  	</div>		  	

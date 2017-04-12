@@ -1,6 +1,6 @@
 var app = angular.module('app', ['ionic', 'main']);
 
-angular.module('main', ['ionic', 'controllers', 'util.gallery'])
+angular.module('main', ['ionic', 'controllers'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {

@@ -4,7 +4,7 @@
 	    	Help Desk
 	    </h4>
 	    <p>
-			Preencha todos os campos se for possível para que possamos lhe oferecer o projeto mais adequado. Ao receber sua solicitação, nosso Setor Comercial irá analisa-la e enviar o melhor projeto dentro de suas condições. Em seguida, entraremos em contato para tirarmos todas as suas dúvidas.
+			Descreva o que deseja e em seguida, entraremos em contato.
 	    </p>
 	    <div style="margin-top: -8%;">
 	    	<form ng-controller="HelpDeskCtrl" name="formSolicitacao" novalidate>
@@ -23,7 +23,7 @@
 			  	</div>
 			    <div class="Grid-cell">
 			  		<label class="item item-input col-3">Telefone Celular*:</label>
-			  		<input type="text" class="col-9" mask="(99) 9?9999-9999" ng-model="cliente.cel" name="cel" required>
+			  		<input type="tel" class="col-9" ui-mask="(99) 9?999-9999" ng-model="cliente.cel" name="cel" required>
 			  		<label ng-show="formSolicitacao.cel.$error.required && !formSolicitacao.cel.$pristine" 
 			  			   class="item" 
 			  			   style="color: #db460e; display: initial;">
@@ -32,11 +32,11 @@
 			  	</div>
 			    <div class="Grid-cell">
 			  		<label class="item item-input col-3">Telefone Fixo:</label>
-			  		<input type="text" class="col-9" mask="(99) 9?9999-9999" ng-model="cliente.fixo">
+			  		<input type="tel" class="col-9" ui-mask="(99) 9?9999-9999" ng-model="cliente.fixo">
 			  	</div>
 			    <div class="Grid-cell">
 			  		<label class="item item-input col-3">e-Mail*:</label>
-			  		<input type="text" class="col-9" ng-model="cliente.email" name="email" required>
+			  		<input type="email" class="col-9" ng-model="cliente.email" name="email" required>
 	            	<label ng-show="formSolicitacao.email.$invalid && !formSolicitacao.email.$pristine" 
 			  			   class="item" 
 			  			   style="color: #db460e; display: initial;">
@@ -49,7 +49,7 @@
 			  	</div>
 			  	
 			  	<div class="row">
-		  			<button class="button button-block" ng-click="sendEmail(solicitacao)" ng-disabled="formSolicitacao.$invalid">
+		  			<button class="button button-block" ng-click="confirmarEnvio(solicitacao)" ng-disabled="formSolicitacao.$invalid">
 						Enviar
 		  			</button>
 			  	</div>		  	

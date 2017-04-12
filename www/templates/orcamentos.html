@@ -25,7 +25,7 @@
 			  	</div>
 			    <div class="Grid-cell">
 			  		<label class="item item-input col-3">Telefone Celular*:</label>
-			  		<input type="text" class="col-9" mask="(99) 9?9999-9999" ng-model="cliente.cel" name="cel" required>
+			  		<input type="tel" class="col-9" ui-mask="(99) 9?9999-9999" ng-model="cliente.cel" name="cel" required>
 			  		<label ng-show="formOrcamento.cel.$error.required && !formOrcamento.cel.$pristine" 
 			  			   class="item" 
 			  			   style="color: #db460e; display: initial;">
@@ -34,11 +34,11 @@
 			  	</div>
 			    <div class="Grid-cell">
 			  		<label class="item item-input col-3">Telefone Fixo:</label>
-			  		<input type="text" class="col-9" mask="(99) 9?9999-9999" ng-model="cliente.fixo">
+			  		<input type="tel" class="col-9" ui-mask="(99) 9?9999-9999" ng-model="cliente.fixo">
 			  	</div>
 			    <div class="Grid-cell">
 			  		<label class="item item-input col-3">e-Mail*:</label>
-			  		<input type="text" class="col-9" ng-model="cliente.email" name="email" required>
+			  		<input type="email" class="col-9" ng-model="cliente.email" name="email" required>
 	            	<label ng-show="formOrcamento.email.$invalid && !formOrcamento.email.$pristine" 
 			  			   class="item" 
 			  			   style="color: #db460e; display: initial;">
@@ -77,7 +77,7 @@
 			    	<textarea style="width: 100%;" placeholder="Descreva outros detalhes do que deseja:" ng-model="cliente.detalhes"></textarea>				  	
 			  	</div>
 			  	<div class="row">
-		  			<button class="button button-block" ng-click="sendEmail(cliente)" ng-disabled="formOrcamento.$invalid">
+		  			<button class="button button-block" ng-click="confirmarEnvio(cliente)" ng-disabled="formOrcamento.$invalid">
 						Enviar
 		  			</button>
 			  	</div>		  	

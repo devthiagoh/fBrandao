@@ -149,19 +149,18 @@
 		  </ion-content>
 		</ion-view>
 	</div>
-	<div ng-show="videos">
+	<div ng-show="videos" ng-controller="YouTubeCtrl">
 		<ion-view view-title="{{servicoSelecionado.title}}" class="custom-background">
 		  <ion-content>
 		  	<div>
 			    <h4>
 			    	Alguns clientes com belos vídeos produzidos pela Fbrandão
 			    </h4>
-			    <ion-list>
+			    <ion-list >
 			        <div class="card">
 			            <ion-item>
 			                <div class="video-container">
 			                    <iframe width="854" height="480" src="https://www.youtube.com/embed/s9J0fCFdpU8" frameborder="0" allowfullscreen></iframe>
-			                    <!-- Vídeo institucional, Fbrandão Web e Comunicação -->
 			                </div>
 			            </ion-item>
 			        </div>

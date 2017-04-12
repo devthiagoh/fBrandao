@@ -1,4 +1,4 @@
-angular.module('controllers', ['ionic', 'uiGmapgoogle-maps'])
+angular.module('controllers', ['ionic', 'uiGmapgoogle-maps', 'util.gallery', 'ui.mask'])
 
 .controller('SplashCtrl', function($scope, $ionicModal, $state, $timeout) {
   
@@ -77,7 +77,7 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps'])
     if(opcao.id == 9){
       $scope.videos = true;
     }
-
+    $scope.carregar_videos = false;
 })
 
 .controller('ListServicosCtrl', function($scope) {
@@ -92,6 +92,10 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps'])
     { title: 'Marketing Digital', id: 8 },
     { title: 'Produção de Vídeos', id: 9 }
   ];
+})
+
+.controller('YouTubeCtrl', function($scope) {
+  $scope.carregar_videos = true;
 })
 
 .controller('PortifoliosCtrl', function($scope, $stateParams) {
@@ -173,6 +177,20 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps'])
     'detalhes' : ''
   };
 
+  $scope.confirmarEnvio = function($stateParams){
+     $ionicPopup.alert({
+          template: 'Confirmar envio?',
+          buttons: [
+            { text: 'Cancelar' }, 
+            { text: 'Enviar',
+              onTap: function(e) {
+                $scope.sendEmail($stateParams);  
+              } 
+            }
+          ]
+      })
+  }
+
   $scope.sendEmail = function($stateParams) {
 
       var empresa = $scope.cliente.empresa;
@@ -230,7 +248,7 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps'])
       var cc = "app@fbrandao.com.br";
 
       console.log('enviando emaillll...');
-      emailjs.send("smtp_fbrandao_id","template_fbrandao_id", 
+      emailjs.send("smtp_fbrandao","template_orcamento_id", 
         {
           send_to: send_to,
           reply_to: "",
@@ -242,9 +260,34 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps'])
 
       $ionicPopup.alert({
           template: 'Solicitação de orçamento enviada com sucesso.<br/><br/> Em breve entraremos em contatos com você.<br/><br/> Obrigado !!!',
-          buttons: [{ text: 'Fechar' }]
+          buttons: [{ text: 'Fechar' ,
+                      onTap: function(e) {
+                        $scope.cliente = {
+                          'empresa' : '',
+                          'nome' : '',
+                          'cel' : '',
+                          'fixo' : '',
+                          'email' : '',
+                          'resposta' : '',
+                          'produtos' : {
+                            'pacote' : false,
+                            'assessoria' : false,
+                            'fotografia' : false,
+                            'facebook' : false,
+                            'sistema' : false,
+                            'hospedagem' : false,
+                            'google' : false,
+                            'design' : false,
+                            'outros' : false
+                          },
+                          'detalhes' : ''
+                        };  
+                      }
+                   }]
       })      
+  
   }
+
 })
 
 .controller('ContatosCtrl', function($scope, $log, $state, $timeout) {
@@ -328,6 +371,20 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps'])
     'detalhes' : ''
   };
 
+  $scope.confirmarEnvio = function($stateParams){
+     $ionicPopup.alert({
+          template: 'Confirmar envio?',
+          buttons: [
+            { text: 'Cancelar' }, 
+            { text: 'Enviar',
+              onTap: function(e) {
+                $scope.sendEmail($stateParams);  
+              } 
+            }
+          ]
+      })
+  }
+
   $scope.sendEmail = function($stateParams) {
 
       var empresa = $scope.cliente.empresa;
@@ -372,7 +429,7 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps'])
       var cc = "app@fbrandao.com.br";
 
       console.log('enviando emaillll...');
-      emailjs.send("smtp_fbrandao_id","template_fbrandao_id", 
+      emailjs.send("smtp_fbrandao","template_sugestao_id", 
         {
           send_to: send_to,
           reply_to: "",
@@ -384,7 +441,27 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps'])
 
       $ionicPopup.alert({
           template: 'Solicitação enviada com sucesso.<br/><br/> Obrigado !!!',
-          buttons: [{ text: 'Fechar' }]
+          buttons: [{ text: 'Fechar',
+                      onTap: function(e) {
+                        $scope.cliente = {
+                          'empresa' : '',
+                          'nome' : '',
+                          'cel' : '',
+                          'fixo' : '',
+                          'email' : ''
+                        };
+
+                        $scope.sugestao = {
+                          'tipos' : {
+                            'elogio' : false,
+                            'sugestao' : false,
+                            'critica' : false,
+                            'reclamacao' : false
+                          },
+                          'detalhes' : ''
+                        };  
+                      }
+                   }]
       })      
   }
 })
@@ -401,6 +478,20 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps'])
 
   $scope.solicitacao = {
     'detalhes' : ''
+  }
+
+  $scope.confirmarEnvio = function($stateParams){
+     $ionicPopup.alert({
+          template: 'Confirmar envio?',
+          buttons: [
+            { text: 'Cancelar' }, 
+            { text: 'Enviar',
+              onTap: function(e) {
+                $scope.sendEmail($stateParams);  
+              } 
+            }
+          ]
+      })
   }
 
   $scope.sendEmail = function($stateParams) {
@@ -433,7 +524,7 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps'])
       var cc = "app@fbrandao.com.br";
 
       console.log('enviando emaillll...');
-      emailjs.send("smtp_fbrandao_id","template_fbrandao_id", 
+      emailjs.send("smtp_fbrandao","template_helpdesk_id", 
         {
           send_to: send_to,
           reply_to: "",
@@ -445,9 +536,24 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps'])
 
       $ionicPopup.alert({
           template: 'Solicitação enviada com sucesso.<br/><br/> Obrigado !!!',
-          buttons: [{ text: 'Fechar' }]
+          buttons: [{ text: 'Fechar',
+                      onTap: function(e) {
+                        $scope.cliente = {
+                          'empresa' : '',
+                          'nome' : '',
+                          'cel' : '',
+                          'fixo' : '',
+                          'email' : ''
+                        };
+
+                        $scope.solicitacao = {
+                          'detalhes' : ''
+                        }
+                      } 
+                   }]
       })      
   }
 })
 
 ;
+
