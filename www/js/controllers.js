@@ -19,7 +19,10 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps'])
     loop: false,
     speed: 100,
     slidesPerView: 1,
-    centeredSlides: true
+    centeredSlides: true,
+    pagination: '.custom-swiper-pagination',
+    paginationHide: false,
+    paginationClickable: true,
   } 
 
   $scope.$on("$ionicSlides.sliderInitialized", function(event, data){

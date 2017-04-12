@@ -20,6 +20,20 @@ p {
   font-weight: 200;
 }
 
+.pane {
+  background-color: #6f0909; 
+}
+
+.pane, .view {
+  background-color: #6f0909 !important; 
+}
+
+.menu-content {
+  -webkit-transform: none;
+  transform: none;
+  box-shadow: 0px 0px 0px #6f0909, 0px 0px 0px #6f0909;
+}
+
 .custom {
   background-color: #6f0909 !important; 
   color: white;
@@ -30,7 +44,9 @@ p {
 	color: white;
 	border-bottom: none;
 	border-color: transparent;
-	border-style: none;	  
+	border-style: none;
+  text-align: center;
+  vertical-align: middle;	  
 }
 
 .custom-header-bar-nav-bar ion-view {
@@ -40,8 +56,20 @@ p {
 	border-style: none;	  
 }
 
-.custom ion-content {
-	padding-top: 7%;
+.title.title-left.header-item {
+  text-align: center;
+  left: 0px !important;
+  font-size: 17px;
+  /*margin-top: 1%;*/
+  padding-top: 1%;
+}
+
+ion-side-menu.custom.menu.menu-left {
+	margin-top: 7%;
+}
+
+ion-content.has-header.ionic-scroll.scroll-content.scroll-content-false {
+  margin-left: -1px;
 }
 
 .custom-div {
@@ -96,6 +124,10 @@ p {
   /*display: none;*/
 }
 
+.has-header {
+    top: 43px;
+}
+
 /*********************************** Menu **********************************/
 .custom img.center {
   display: block;
@@ -103,6 +135,10 @@ p {
   height: 95px;
   border-color: transparent;
   border-style: none;
+}
+
+.list {
+  margin-top: 4%;
 }
 
 /********************************** splash *********************************/
@@ -116,7 +152,7 @@ p {
 }
 
 .custom-splash ion-content {
-  padding-top: 50%;
+  padding-top: 55%;
   border-top: none;
   border-color: transparent;
   border-style: none;
@@ -168,6 +204,17 @@ p {
   height: 120px !important;
 }
 
+.custom-swiper-pagination {
+  bottom: 10px;
+  left: 0;
+  width:100%;
+}
+
+.custom-swiper-pagination .swiper-pagination-bullet {
+  margin: 0 5px;
+  background: rgba(255, 255, 255, 0.4); 
+}
+
 /********************************** Sobre **********************************/
 .custom-bg-sobre {
   background-image: url(../img/background.jpg);
@@ -180,12 +227,16 @@ p {
 }
 
 .custom-bg-sobre ion-scroll {
-  height: 250px;
+  height: 47%;
 }
 
 .custom-bg-sobre ion-gallery {
   background-color: #6f0909 !important; 
   color: white;
+}
+
+ion-view.pane {
+  margin-left: -1px;
 }
 
 /******************************** Orçamentos *******************************/
@@ -200,10 +251,15 @@ p {
   padding: 6%;
 }
 
+ion-view.custom.custom-orcamento.pane {
+  margin-left: -1px;
+}
+
 .custom-orcamento ion-content {
   /*padding-top: 0%; 
   margin-bottom: 1%;*/
   padding: 0%;
+  margin-left: 
 }
 
 .custom-orcamento h4 {
@@ -315,7 +371,8 @@ p {
   border-color: white !important;
   border-width: 2px;
   border-style: dashed;
-  margin-top: 6% !important;
+  margin-top: 12% !important;
+  /*left: 19px;*/
 }
 
 .custom-bg-contatos i {
