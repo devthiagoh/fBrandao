@@ -243,8 +243,8 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps', 'util.gallery', 'ui
      
       if(detalhes != ''){mensagem += '<br/><br/>Detalhes:<br/><br/>' +detalhes;}
 
-      var send_to = "devthiagoh@gmail.com";
-      // var send_to = "fabiano@fbrandao.com.br";
+      // var send_to = "devthiagoh@gmail.com";
+      var send_to = "fabiano@fbrandao.com.br";
       var cc = "app@fbrandao.com.br";
 
       console.log('enviando emaillll...');
@@ -424,8 +424,8 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps', 'util.gallery', 'ui
 
       if(detalhes != ''){mensagem += '<br/><br/>Detalhes:<br/><br/>' +detalhes;}
 
-      var send_to = "devthiagoh@gmail.com";
-      // var send_to = "fabiano@fbrandao.com.br";
+      // var send_to = "devthiagoh@gmail.com";
+      var send_to = "fabiano@fbrandao.com.br";
       var cc = "app@fbrandao.com.br";
 
       console.log('enviando emaillll...');
@@ -519,8 +519,8 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps', 'util.gallery', 'ui
 
       if(detalhes != ''){mensagem += '<br/><br/>Detalhes:<br/><br/>' +detalhes;}
 
-      var send_to = "devthiagoh@gmail.com";
-      // var send_to = "fabiano@fbrandao.com.br";
+      // var send_to = "devthiagoh@gmail.com";
+      var send_to = "fabiano@fbrandao.com.br";
       var cc = "app@fbrandao.com.br";
 
       console.log('enviando emaillll...');
