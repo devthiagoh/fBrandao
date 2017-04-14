@@ -1,10 +1,43 @@
-<div ng-controller="ListServicosCtrl">
+<div>
 	<ion-view view-title="Serviços" class="custom">
 	  <ion-content>
 	    <ion-list>
-	      <ion-item ng-repeat="servico in servicos" href="#/menu/servicos/{{servico}}">
-	        {{servico.title}}
-	      </ion-item>
+	      	<ion-item href="#/menu/servicos/sites" class="item item-icon-left">
+	          <i class="icon ion-monitor"></i>
+	          Sites
+	        </ion-item>
+	        <ion-item href="#/menu/servicos/hospedagem" class="item item-icon-left">
+	          <i class="icon ion-android-cloud-outline"></i>
+	          Hospedagem
+	        </ion-item>		
+	        <ion-item href="#/menu/servicos/mobile" class="item item-icon-left">
+	          <i class="icon ion-ipad"></i>
+	          Sites Mobile
+	        </ion-item>		
+	        <ion-item href="#/menu/servicos/logos" class="item item-icon-left">
+	          <i class="icon ion-social-sass"></i>
+	          Logos
+	        </ion-item>		
+	        <ion-item href="#/menu/servicos/design" class="item item-icon-left">
+	          <i class="icon ion-paintbrush"></i>
+	          Design Gráfico
+	        </ion-item>		
+	        <ion-item href="#/menu/servicos/assessoria" class="item item-icon-left">
+	          <i class="icon ion-person-stalker"></i>
+	          Assessoria Mensal
+	        </ion-item>		
+	        <ion-item href="#/menu/servicos/fotografias" class="item item-icon-left">
+	          <i class="icon ion-camera"></i>
+	          Fotografias
+	        </ion-item>		
+	        <ion-item href="#/menu/servicos/marketing" class="item item-icon-left">
+	          <i class="icon ion-social-google-outline"></i>
+	          Marketing Digital
+	        </ion-item>		
+	        <ion-item href="#/menu/servicos/videos" class="item item-icon-left">
+	          <i class="icon ion-videocamera"></i>
+	          Produção de Vídeos
+	        </ion-item>		
 	    </ion-list>
 	  </ion-content>
 	</ion-view>
