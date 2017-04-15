@@ -4,7 +4,7 @@
 	    	Help Desk
 	    </h4>
 	    <p>
-			Descreva o que deseja e em seguida, entraremos em contato.
+			Caso seja um cliente FBrandão, por favor preencha os dados corretamente. Descreva quais são as suas necessidades para que nossa equipe possa avaliar e atende-lo da melhor forma possível.
 	    </p>
 	    <div style="margin-top: -8%;">
 	    	<form ng-controller="HelpDeskCtrl" name="formSolicitacao" novalidate>
@@ -23,7 +23,7 @@
 			  	</div>
 			    <div class="Grid-cell">
 			  		<label class="item item-input col-3">Telefone Celular*:</label>
-			  		<input type="tel" class="col-9" ui-mask="(99) 9?999-9999" ng-model="cliente.cel" name="cel" required>
+			  		<input type="tel" class="col-9" ui-mask="(99) 9?9999-9999" ng-model="cliente.cel" name="cel" required>
 			  		<label ng-show="formSolicitacao.cel.$error.required && !formSolicitacao.cel.$pristine" 
 			  			   class="item" 
 			  			   style="color: #db460e; display: initial;">

@@ -139,6 +139,15 @@ angular.module('main', ['ionic', 'controllers'])
       }
     })
 
+    .state('menu.portifolio', {
+      url: '/portifolio',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/portifolio.html'
+        }
+      }
+    })
+
     .state('menu.opinioes', {
       url: '/opinioes',
       views: {

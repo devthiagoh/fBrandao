@@ -83,7 +83,7 @@ ion-content.has-header.ionic-scroll.scroll-content.scroll-content-false {
 
 .custom .item {
   background-color: transparent;
-  /*border:none;*/
+  border:none;
   color: white;
   /*border-color: #ccc;*/
   /*border-style: none; */
@@ -137,10 +137,19 @@ ion-content.has-header.ionic-scroll.scroll-content.scroll-content-false {
   border-style: none;
 }
 
-.list {
-  margin-top: 4%;
+.custom ion-label {
+    color: white;
+    border: dashed;
+    border-bottom-width: thin;
+    max-width: 100% !important;
+    width: 100%;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    border-left: none;
+    border-top: none;
+    border-right: none;
 }
-
 
 .custom-item {
   background-color: transparent;
@@ -254,6 +263,12 @@ ion-view.pane {
   padding: 6%;
 }
 
+.custom-orcamento .item {
+  border: none;
+  border-color: transparent;
+  border-style: none;
+}
+
 ion-view.custom.custom-orcamento.pane {
   margin-left: -1px;
 }
@@ -267,6 +282,10 @@ ion-view.custom.custom-orcamento.pane {
 
 .custom-orcamento h4 {
   padding-top: 4%;
+}
+
+.custom-orcamento p {
+  text-align: center;
 }
 
 .custom-orcamento textarea {
