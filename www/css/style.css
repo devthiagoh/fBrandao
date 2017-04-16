@@ -1,13 +1,4 @@
 /*********************************** all ***********************************/
-.custom-splash {
-  background-image: url(../img/background_home_01.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-}
-
 @font-face {
     font-family: 'customFont';
     src: url('../lib/ionic/fonts/custom.woff') format('woff');
@@ -148,7 +139,7 @@ ion-content.has-header.ionic-scroll.scroll-content.scroll-content-false {
 
 .custom ion-label {
     color: white;
-    border: dashed;
+    border: solid;
     border-bottom-width: thin;
     max-width: 100% !important;
     width: 100%;
@@ -259,6 +250,15 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 ion-view.pane {
   margin-left: -1px;
 }
+
+.button.button-light.button-outline {
+    border-color: #ddd;
+    background: transparent;
+    color: #ddd;
+    border: 1px solid;
+    font-weight: normal;
+    font-size: 15px;
+  }
 
 /******************************** Orçamentos *******************************/
 .custom-orcamento {

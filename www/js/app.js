@@ -2,7 +2,7 @@ var app = angular.module('app', ['ionic', 'main']);
 
 angular.module('main', ['ionic', 'controllers'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $ionicPopup) {
   $ionicPlatform.ready(function() {
     if (window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
@@ -13,6 +13,23 @@ angular.module('main', ['ionic', 'controllers'])
       StatusBar.styleDefault();
     }
   });
+
+  // Disable BACK button on home
+  $ionicPlatform.registerBackButtonAction(function(event) {
+    if (true) {
+      $ionicPopup.alert({
+          template: 'Deseja realmente sair do aplicativo?',
+          buttons: [
+            { text: 'Cancelar' }, 
+            { text: 'Sair',
+              onTap: function(e) {
+                ionic.Platform.exitApp();
+              } 
+            }
+          ]
+      })
+    }
+  }, 100);
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
