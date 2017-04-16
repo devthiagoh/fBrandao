@@ -4,6 +4,12 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps', 'util.gallery', 'ui
   $state.go('menu.home');
 })
 
+.controller('MenuCtrl', function($scope) {
+  $scope.openFacebookApp = function() {
+    window.open('fb:BrandaoAgenciaWeb', '_system', 'location=yes');
+  }
+})
+
 .controller('HomeCtrl', function($scope) {
   $scope.options = {
     autoplay: 5000,
