@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="br.com.fbrandao.app" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="fbrandao" version="1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>fBrandão</name>
   <description>
         Aplicativo fBrandão
   </description>
-  <author email="devthiagoh@gmail.com" href="https://github.com/devthiagoh">
-    Thiago Henrique Santos Leite
+  <author email="app@fbrandao.com.br" href="https://www.fbrandao.com.br">
+    FBrandão Agência Digital
   </author>
   <content src="index.html"/>
   <access origin="*"/>

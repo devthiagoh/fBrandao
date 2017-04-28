@@ -6,7 +6,8 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps', 'util.gallery', 'ui
 
 .controller('MenuCtrl', function($scope) {
   $scope.openFacebookApp = function() {
-    window.open('fb:BrandaoAgenciaWeb', '_system', 'location=yes');
+    // window.open('facebook://pages/BrandaoAgenciaWeb', '_system', 'location=no')
+    window.open('fb://page/BRANDAOAGENCIAWEB', '_system', 'location=no')
   }
 })
 
@@ -141,7 +142,7 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps', 'util.gallery', 'ui
 
       // var send_to = "devthiagoh@gmail.com";
       var send_to = "fabiano@fbrandao.com.br";
-      var cc = "app@fbrandao.com.br";
+      var cc = "atendimento@fbrandao.com.br";
 
       console.log('enviando emaillll...');
       emailjs.send("smtp_fbrandao","template_orcamento_id", 
@@ -322,7 +323,7 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps', 'util.gallery', 'ui
 
       // var send_to = "devthiagoh@gmail.com";
       var send_to = "fabiano@fbrandao.com.br";
-      var cc = "app@fbrandao.com.br";
+      var cc = "atendimento@fbrandao.com.br";
 
       console.log('enviando emaillll...');
       emailjs.send("smtp_fbrandao","template_sugestao_id", 
@@ -417,7 +418,7 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps', 'util.gallery', 'ui
 
       // var send_to = "devthiagoh@gmail.com";
       var send_to = "fabiano@fbrandao.com.br";
-      var cc = "app@fbrandao.com.br";
+      var cc = "atendimento@fbrandao.com.br";
 
       console.log('enviando emaillll...');
       emailjs.send("smtp_fbrandao","template_helpdesk_id", 
