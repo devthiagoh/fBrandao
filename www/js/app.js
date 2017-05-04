@@ -43,8 +43,7 @@ angular.module('main', ['ionic', 'controllers'])
     .state('menu', {
       url: '/menu',
       abstract: true,
-      templateUrl: 'templates/menu.html',
-      controller: 'MenuCtrl'
+      templateUrl: 'templates/menu.html'
     })
 
     .state('menu.home', {

@@ -4,13 +4,6 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps', 'util.gallery', 'ui
   $state.go('menu.home');
 })
 
-.controller('MenuCtrl', function($scope) {
-  $scope.openFacebookApp = function() {
-    // window.open('facebook://pages/BrandaoAgenciaWeb', '_system', 'location=no')
-    window.open('fb://page/BRANDAOAGENCIAWEB', '_system', 'location=no')
-  }
-})
-
 .controller('HomeCtrl', function($scope) {
   $scope.options = {
     autoplay: 5000,
