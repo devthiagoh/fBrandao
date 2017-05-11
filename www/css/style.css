@@ -309,8 +309,9 @@ ion-view.custom.custom-orcamento.pane {
 
 .item-checkbox {
     padding-top: 10px;
-    padding-left: 36px;
+    padding-left: 37px;
     margin-left: -10px;
+    left: 7%;
 }
 
 i.checkbox-icon {
