@@ -68,9 +68,9 @@ ion-side-menu.custom.menu.menu-left {
 	margin-top: 7%;
 }
 
-ion-content.has-header.ionic-scroll.scroll-content.scroll-content-false {
+/*ion-content.has-header.ionic-scroll.scroll-content.scroll-content-false {
   margin-left: -1px;
-}
+}*/
 
 .custom-div {
 	color: gray;
@@ -308,8 +308,19 @@ ion-view.custom.custom-orcamento.pane {
 }
 
 .item-checkbox {
-    /*padding-left: 46px;*/
+    padding-top: 10px;
+    padding-left: 36px;
+    margin-left: -10px;
 }
+
+i.checkbox-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/*.item-content.disable-pointer-events {
+  margin-top: -10%;
+}*/
 
 .custom-orcamento button {
   display: block;
@@ -346,6 +357,8 @@ ion-view.custom.custom-orcamento.pane {
   background-color: #6f0909 !important;
   color:#fff !important;
 }
+
+
 
 /**************************** Opiniões Clientes ****************************/
 .custom-opinioes img {

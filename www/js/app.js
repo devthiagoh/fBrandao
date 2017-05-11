@@ -8,6 +8,7 @@ angular.module('main', ['ionic', 'controllers'])
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
       cordova.plugins.Keyboard.disableScroll(true);
 
+    // window.open = cordova.InAppBrowser.open;
     }
     if (window.StatusBar) {
       StatusBar.styleDefault();
@@ -32,8 +33,16 @@ angular.module('main', ['ionic', 'controllers'])
   }, 100);
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider, $cordovaInAppBrowserProvider) {
   
+  var defaultOptions = {
+    location: 'no',
+    clearcache: 'no',
+    toolbar: 'no'
+  };
+
+  $cordovaInAppBrowserProvider.setDefaultOptions(defaultOptions);
+
   $stateProvider
     .state('main', {
       url: '/main',
@@ -43,7 +52,8 @@ angular.module('main', ['ionic', 'controllers'])
     .state('menu', {
       url: '/menu',
       abstract: true,
-      templateUrl: 'templates/menu.html'
+      templateUrl: 'templates/menu.html',
+          controller: 'MenuCtrl'
     })
 
     .state('menu.home', {

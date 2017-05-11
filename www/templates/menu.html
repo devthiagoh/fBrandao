@@ -1,4 +1,4 @@
-<ion-side-menus enable-menu-with-back-views="false">
+<ion-side-menus enable-menu-with-back-views="false" ng-controller="MenuCtrl">
   <ion-side-menu-content class="custom-header-bar-nav-bar">
     <ion-nav-bar>
       <ion-nav-back-button>
@@ -17,54 +17,54 @@
       <img class="center" src="img/logo.png">
       </br>
       <ion-list>
-        <ion-scroll scrollY="true">
-          <ion-item menu-close href="#/menu/home" class="custom-item item-icon-left">
-            <i class="icon ion-home"></i>
-            HOME
-          </ion-item>
-          <ion-item menu-close href="#/menu/sobre" class="custom-item item-icon-left">
-            <i class="icon ion-android-list"></i>
-            AFBRANDÃO
-          </ion-item>
-          <ion-item menu-close href="#/menu/servicos" class="custom-item item-icon-left">
-            <i class="icon ion-ios-lightbulb-outline"></i>
-            SERVIÇOS
-          </ion-item>
-          <ion-item menu-close href="#/menu/portifolio" class="custom-item item-icon-left">
-            <i class="icon ion-social-buffer-outline"></i>
-            PORTIFÓLIO
-          </ion-item>
-          <ion-item menu-close href="#/menu/opinioes" class="custom-item item-icon-left">
-            <i class="icon ion-android-chat"></i>
-            OPINIÕES CLIENTES
-          </ion-item>
-          <ion-item menu-close href="#/menu/orcamentos" class="custom-item item-icon-left">
-            <i class="icon ion-social-usd"></i>
-            ORÇAMENTOS
-          </ion-item>
-          <ion-item menu-close href="#/menu/contatos" class="custom-item item-icon-left">
-            <i class="icon ion-android-call"></i>
-            CONTATOS
-          </ion-item>
-          <ion-item menu-close href="#/menu/sugestoes" class="custom-item item-icon-left">
-            <i class="icon ion-speakerphone"></i>
-            SUGESTÕES
-          </ion-item>
-          <ion-item menu-close href="#/menu/helpdesk" class="custom-item item-icon-left">
-            <i class="icon ion-clipboard"></i>
-            HELP DESK
-          </ion-item>
-          <ion-item menu-close class="custom-item item-icon-left" 
-                    href="#" onclick="window.open('fb://page/294965060525147', '_system', 'location=yes')">
-            <i class="icon ion-social-facebook-outline"></i>
-            FACEBOOK
-          </ion-item>
-          <ion-item menu-close class="custom-item item-icon-left" 
-                    onclick="window.open('https://www.instagram.com/fbrandaoagencia/', '_blank', 'location=no')">
-            <i class="icon ion-social-instagram-outline"></i>
-            INSTAGRAM
-          </ion-item>
-        </ion-scroll>
+        <ion-item menu-close href="#/menu/home" class="custom-item item-icon-left">
+          <i class="icon ion-home"></i>
+          HOME
+        </ion-item>
+        <ion-item menu-close href="#/menu/sobre" class="custom-item item-icon-left">
+          <i class="icon ion-android-list"></i>
+          AFBRANDÃO
+        </ion-item>
+        <ion-item menu-close href="#/menu/servicos" class="custom-item item-icon-left">
+          <i class="icon ion-ios-lightbulb-outline"></i>
+          SERVIÇOS
+        </ion-item>
+        <ion-item menu-close href="#/menu/portifolio" class="custom-item item-icon-left">
+          <i class="icon ion-social-buffer-outline"></i>
+          PORTIFÓLIO
+        </ion-item>
+        <ion-item menu-close href="#/menu/opinioes" class="custom-item item-icon-left">
+          <i class="icon ion-android-chat"></i>
+          OPINIÕES CLIENTES
+        </ion-item>
+        <ion-item menu-close href="#/menu/orcamentos" class="custom-item item-icon-left">
+          <i class="icon ion-social-usd"></i>
+          ORÇAMENTOS
+        </ion-item>
+        <ion-item menu-close href="#/menu/contatos" class="custom-item item-icon-left">
+          <i class="icon ion-android-call"></i>
+          CONTATOS
+        </ion-item>
+        <ion-item menu-close href="#/menu/sugestoes" class="custom-item item-icon-left">
+          <i class="icon ion-speakerphone"></i>
+          SUGESTÕES
+        </ion-item>
+        <ion-item menu-close href="#/menu/helpdesk" class="custom-item item-icon-left">
+          <i class="icon ion-clipboard"></i>
+          HELP DESK
+        </ion-item>
+        <ion-item menu-close class="custom-item item-icon-left" 
+                  href="#" ng-click="openFacebook()">
+          <i class="icon ion-social-facebook-outline"></i>
+          FACEBOOK
+        </ion-item>
+        <ion-item menu-close class="custom-item item-icon-left" 
+                  onclick="window.open('https://www.instagram.com/fbrandaoagencia/', '_blank', 'location=no')">
+          <i class="icon ion-social-instagram-outline"></i>
+          INSTAGRAM
+        </ion-item>
+        <ion-item >
+        </ion-item>
       </ion-list>
     </ion-content>
   </ion-side-menu>
