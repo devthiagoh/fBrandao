@@ -70,6 +70,7 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps', 'util.gallery', 'ui
     'resposta' : '',
     'produtos' : {
       'app' : false,
+      'site' : false,
       'pacote' : false,
       'assessoria' : false,
       'fotografia' : false,
@@ -123,6 +124,7 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps', 'util.gallery', 'ui
 
       /* produtos */ 
       var app = $scope.cliente.produtos.app;
+      var site = $scope.cliente.produtos.site;
       var pacote = $scope.cliente.produtos.pacote;
       var assessoria = $scope.cliente.produtos.assessoria;
       var fotografia = $scope.cliente.produtos.fotografia;
@@ -134,7 +136,8 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps', 'util.gallery', 'ui
       var outros = $scope.cliente.produtos.outros;
       
       var produtos = '';
-      if(app     == true){produtos += '- Aplicativo<br/>';}      
+      if(app     == true){produtos += '- Aplicativo<br/>';}
+      if(site     == true){produtos += '- Site<br/>';}      
       if(pacote     == true){produtos += '- Pacote<br/>';}      
       if(assessoria == true){produtos += '- Assessoria<br/>';}      
       if(fotografia == true){produtos += '- Fotografia<br/>';}      
