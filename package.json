@@ -1,6 +1,6 @@
 {
   "name": "FBrandao",
-  "version": "1.0.4",
+  "version": "1.5",
   "description": "FBrandão",
   "dependencies": {
     "gulp": "^3.5.6",
