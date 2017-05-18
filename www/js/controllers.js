@@ -7,14 +7,18 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps', 'util.gallery', 'ui
 .controller('MenuCtrl', function($scope, $cordovaInAppBrowser) {
 
   var options = {
-      location: 'yes',
+      location: 'no',
       clearcache: 'yes',
       toolbar: 'no'
     };
   
   $scope.openFacebook = function(){
     // window.open('fb://page/294965060525147', '_system', 'location=no');
-    $cordovaInAppBrowser.open('fb://page/294965060525147', '_system', options);
+    $cordovaInAppBrowser.open('fb://page/294965060525147', '_system');
+  }
+  
+  $scope.openInstagram = function(){
+    $cordovaInAppBrowser.open('instagram://user?username=fbrandaoagencia', '_system', options);
   }
 
 })
