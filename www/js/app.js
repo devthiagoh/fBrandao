@@ -33,16 +33,8 @@ angular.module('main', ['ionic', 'controllers'])
   }, 100);
 })
 
-.config(function($stateProvider, $urlRouterProvider, $cordovaInAppBrowserProvider) {
+.config(function($stateProvider, $urlRouterProvider) {
   
-  var defaultOptions = {
-    location: 'no',
-    clearcache: 'no',
-    toolbar: 'no'
-  };
-
-  $cordovaInAppBrowserProvider.setDefaultOptions(defaultOptions);
-
   $stateProvider
     .state('main', {
       url: '/main',
