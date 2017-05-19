@@ -14,7 +14,8 @@ angular.module('controllers', ['ionic', 'uiGmapgoogle-maps', 'util.gallery', 'ui
   
   $scope.openFacebook = function(){
     // window.open('fb://page/294965060525147', '_system', 'location=no');
-    $cordovaInAppBrowser.open('fb://page/294965060525147', '_system');
+    // $cordovaInAppBrowser.open('fb://page/294965060525147', '_system');
+    $cordovaInAppBrowser.open('https://www.facebook.com/BrandaoAgenciaWeb/', '_system', options);
   }
   
   $scope.openInstagram = function(){
