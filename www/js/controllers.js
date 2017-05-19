@@ -1,25 +1,20 @@
-angular.module('controllers', ['ionic', 'uiGmapgoogle-maps', 'util.gallery', 'ui.mask', 'ngCordova'])
+angular.module('controllers', ['ionic', 'uiGmapgoogle-maps', 'util.gallery', 'ui.mask'])
 
 .controller('MainCtrl', function($state) {
   $state.go('menu.home');
 })
 
-.controller('MenuCtrl', function($scope, $cordovaInAppBrowser) {
-
-  var options = {
-      location: 'no',
-      clearcache: 'yes',
-      toolbar: 'no'
-    };
+.controller('MenuCtrl', function($scope) {
   
   $scope.openFacebook = function(){
     // window.open('fb://page/294965060525147', '_system', 'location=no');
     // $cordovaInAppBrowser.open('fb://page/294965060525147', '_system');
-    $cordovaInAppBrowser.open('https://www.facebook.com/BrandaoAgenciaWeb/', '_system', options);
+    window.open('https://www.facebook.com/BrandaoAgenciaWeb/', '_system', 'location=no');
   }
   
   $scope.openInstagram = function(){
-    $cordovaInAppBrowser.open('instagram://user?username=fbrandaoagencia', '_system', options);
+    // window.open('instagram://user?username=fbrandaoagencia', '_system', 'location=no');
+    window.open('https://www.instagram.com/fbrandaoagencia/', '_system', 'location=no');
   }
 
 })
