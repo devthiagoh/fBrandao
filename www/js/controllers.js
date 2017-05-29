@@ -1,20 +1,27 @@
-angular.module('controllers', ['ionic', 'uiGmapgoogle-maps', 'util.gallery', 'ui.mask'])
+angular.module('controllers', ['ionic', 'uiGmapgoogle-maps', 'util.gallery', 'ui.mask', 'ngCordova'])
 
 .controller('MainCtrl', function($state) {
   $state.go('menu.home');
 })
 
-.controller('MenuCtrl', function($scope) {
+.controller('MenuCtrl', function($scope, $cordovaInAppBrowser) {
   
+  var options = {
+       location: 'no',
+       location: 'no',
+       clearcache: 'yes',
+       toolbar: 'no'
+     };
+
   $scope.openFacebook = function(){
     // window.open('fb://page/294965060525147', '_system', 'location=no');
-    // $cordovaInAppBrowser.open('fb://page/294965060525147', '_system');
-    window.open('https://www.facebook.com/BrandaoAgenciaWeb/', '_system', 'location=no');
+    $cordovaInAppBrowser.open('fb://page/294965060525147', '_system', options);
+    // window.open('https://www.facebook.com/BrandaoAgenciaWeb/', '_system', 'location=no');
   }
   
   $scope.openInstagram = function(){
-    // window.open('instagram://user?username=fbrandaoagencia', '_system', 'location=no');
-    window.open('https://www.instagram.com/fbrandaoagencia/', '_system', 'location=no');
+    $cordovaInAppBrowser.open('instagram://user?username=fbrandaoagencia', '_system', options);
+    // window.open('https://www.instagram.com/fbrandaoagencia/', '_system', 'location=no');
   }
 
 })

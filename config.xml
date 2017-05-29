@@ -72,4 +72,5 @@
         <splash height="480" src="resources\ios\splash\Default~iphone.png" width="320" />
     </platform>
     <icon src="resources\android\icon\drawable-xhdpi-icon.png" />
+    <engine name="android" spec="~6.1.2" />
 </widget>
